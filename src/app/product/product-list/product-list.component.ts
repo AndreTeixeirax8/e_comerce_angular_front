@@ -8,7 +8,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductListComponent implements OnInit {
   products: any;
-
+  //PAREI NA AULA 27  NO MINUTO 2:40
   constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
