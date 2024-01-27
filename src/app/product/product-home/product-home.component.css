@@ -4,13 +4,35 @@
   margin: 0.5rem;
 }
 .collection-header {
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .header {
-  margin-top: 5rem;
-  margin-left: 2.9rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  /* margin-left: 2.9rem;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+/*Landing IMG start*/
+
+.land-img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.down {
+  position: absolute;
+  right: 50px;
+  top: 170px;
+}
+
+/*Landing IMG end*/
 
 .btn-container {
   display: flex;
