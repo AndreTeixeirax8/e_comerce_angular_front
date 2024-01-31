@@ -9,22 +9,24 @@ import { ProductService } from '../services/product.service';
 })
 export class SubCategoryComponent implements OnInit {
   public href: string = '';
-  subCategory: any;
   subProducts: any;
+  routeName: any;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     public productService: ProductService
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((data) =>
-      //console.log('data', data['id'])
+    this.activatedRoute.params.subscribe((data: any) => {
+      console.log('data', data['id']);
+      this.routeName = data['id'];
       this.productService
         .getProductsBySubCategory(data['id'])
         .subscribe((products) => {
           console.log('products', products);
           this.subProducts = products;
-        })
-    );
+        });
+    });
   }
 }
