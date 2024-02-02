@@ -15,28 +15,24 @@
   />
 </div>
 
-<div class="header">
-  <h4 class="collection-header">Gucci - GG</h4>
-</div>
-
-<div class="product-list-container">
-  <div class="product-list">
-    <img
-      class="product-img"
-      src="https://ik.imagekit.io/cqjm5db3n/21789859-1-nero-removebg-preview_wgW5IS-k3.png?updatedAt=1706028046950"
-      alt=""
-    />
-    <h5 class="product-list-text">Purses</h5>
+<div *ngIf="product">
+  <div class="header">
+    <h4 class="collection-header">{{ product.brands }}</h4>
   </div>
-  <div class="product-price">2000</div>
 
-  <div class="product-info">
-    Exiba a sua elegância com esta bolsa feminina de couro preta. Com um design
-    quadrado moderno, esta bolsa é a combinação perfeita de estilo e
-    funcionalidade
+  <div class="product-list-container">
+    <div class="product-list">
+      <img class="product-img" [src]="product.imgUrl1" alt="" />
+      <h5 class="product-list-text">Purses</h5>
+    </div>
+    <div class="product-price">product.price</div>
+
+    <div class="product-info">
+      {{ product.description }}
+    </div>
   </div>
-</div>
 
-<div class="buy-btn-container">
-  <button class="buy-btn">Buy</button>
+  <div class="buy-btn-container">
+    <button class="buy-btn">Buy</button>
+  </div>
 </div>

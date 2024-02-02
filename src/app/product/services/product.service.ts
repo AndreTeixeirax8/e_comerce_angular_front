@@ -16,4 +16,8 @@ export class ProductService {
   getProductsBySubCategory(id: any) {
     return this.http.get(this.apiUrl + '/product/category/' + id);
   }
+
+  getProductDetailById(id: any) {
+    return this.http.get(this.apiUrl + '/product/' + id);
+  }
 }

@@ -22,7 +22,9 @@
 
 <div class="product-list-container">
   <div class="product-list" *ngFor="let product of subProducts">
-    <img class="product-img" [src]="product.imgUrl1" alt="" />
-    <h5 class="product-list-text">{{ product.brands }}</h5>
+    <div class="product-container" [routerLink]="['/detail', product.id]">
+      <img class="product-img" [src]="product.imgUrl1" alt="" />
+      <h5 class="product-list-text">{{ product.brands }}</h5>
+    </div>
   </div>
 </div>
