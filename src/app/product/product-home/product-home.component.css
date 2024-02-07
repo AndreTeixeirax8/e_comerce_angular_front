@@ -6,6 +6,7 @@
 .collection-header {
   font-weight: 600;
   font-size: 2rem;
+  margin-right: 2rem;
 }
 
 .header {
@@ -79,8 +80,29 @@
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 600px) {
-  .btn {
-    color: red;
+@media screen and (min-width: 768px) {
+  .land-img {
+    margin: 2.5rem 0 0 1rem;
+  }
+
+  .btn-container {
+    display: none;
+  }
+  .lang-img-container {
+    grid-area: left;
+  }
+  .product-list-container {
+    grid-area: right;
+  }
+  .desktop-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "left right"
+      "left right";
+  }
+  h2 br {
+    display: none;
   }
 }
