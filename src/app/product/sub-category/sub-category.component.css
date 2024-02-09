@@ -64,3 +64,44 @@
 .product-container {
   margin: 0 auto;
 }
+.best-seller-container {
+  display: none;
+}
+
+/*desktop */
+@media screen and(min-width:768px) {
+  .best-seller-container {
+    grid-area: left;
+    display: block;
+    margin-left: 1.5rem;
+  }
+  .product-list-container {
+    grid-area: right;
+    margin-top: 2.7rem;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "left right"
+      "left right";
+  }
+  .collection-title {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+  .best-img {
+    max-width: 400px;
+  }
+
+  .best-seller-t {
+    text-align: center;
+    font-weight: 400;
+    margin: 0.5rem 0;
+  }
+  .best-seller-p {
+    text-align: center;
+  }
+}
