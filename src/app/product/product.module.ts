@@ -6,6 +6,7 @@ import { ProductBagsComponent } from './product-bags/product-bags.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { TitleTransformPipe } from './title.transform.pipe';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { TitleTransformPipe } from './title.transform.pipe';
     ProductDetailComponent,
     SubCategoryComponent,
   ],
-  imports: [CommonModule, ProductRoutingModule],
+  imports: [CommonModule, ProductRoutingModule, IvyCarouselModule],
 })
 export class ProductModule {}
