@@ -16,11 +16,11 @@
 </div>
 
 <div *ngIf="product">
-  <div class="header">
-    <h4 class="collection-header">{{ product.brands }}</h4>
-  </div>
-
   <div class="product-list-container">
+    <div class="header">
+      <h4 class="collection-header">{{ product.brands }}</h4>
+    </div>
+
     <div class="product-list">
       <img class="product-img" [src]="product.imgUrl1" alt="" />
       <h5 class="product-list-text">Purses</h5>
@@ -32,9 +32,19 @@
     </div>
   </div>
 
+  <div class="lower-diplay">PAREI EM 15:52 DA AULA</div>
+
   <div class="buy-btn-container">
     <button class="buy-btn">Buy</button>
   </div>
 
-  <carousel [images]="images"></carousel>
+  <carousel
+    [images]="images"
+    [height]="90"
+    [width]="230"
+    [counter]="true"
+    [arrowsOutside]="true"
+    class="carousel-container"
+  >
+  </carousel>
 </div>

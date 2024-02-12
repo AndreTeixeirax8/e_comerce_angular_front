@@ -23,9 +23,13 @@ export class ProductDetailComponent implements OnInit {
     {
       path: 'https://ik.imagekit.io/cqjm5db3n/dres.png?updatedAt=1705951004068',
     },
+    {
+      path: 'https://ik.imagekit.io/cqjm5db3n/21789859-1-nero-removebg-preview_wgW5IS-k3.png?updatedAt=1706028046950',
+    },
+    {
+      path: 'https://ik.imagekit.io/cqjm5db3n/dres.png?updatedAt=1705951004068',
+    },
   ];
-
-  //PAREM EM 8  MINUTOS NA AULA
 
   constructor(
     private activatedRoute: ActivatedRoute,
