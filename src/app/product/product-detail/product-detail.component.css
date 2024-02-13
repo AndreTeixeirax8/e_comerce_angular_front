@@ -91,3 +91,61 @@
 .buy-btn-container {
   text-align: center;
 }
+
+/*
+.carousel-container {
+  display: none; 
+}*/
+
+/*desktop*/
+
+@media screen and (min-width: 768px) {
+  .header {
+    grid-area: header;
+    margin-top: 0rem;
+  }
+  .product-list {
+    grid-area: img;
+    margin: 1.5rem auto 0;
+  }
+  .product-price {
+    grid-area: price;
+  }
+  .product-info {
+    grid-area: info;
+  }
+  .buy-btn-container {
+    grid-area: btn;
+    margin-right: auto;
+  }
+  .carousel-container {
+    grid-area: carousel;
+    margin: 0 auto;
+    display: block;
+  }
+  .product-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "img header"
+      "img price"
+      "img info";
+  }
+
+  .lower-display {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "carousel btn";
+  }
+
+  .collection-header {
+    text-align: left;
+  }
+
+  .buy-btn {
+    padding: 14px 140px 14px;
+  }
+}
