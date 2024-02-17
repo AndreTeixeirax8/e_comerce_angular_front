@@ -72,13 +72,16 @@
 }
 
 /*/*NAV BAR MOBILE*/
-.menu-items li {
+.hideText {
+  display: none;
+}
+/*.menu-items li {
   display: none;
 }
 
 .nav-bar-menu {
   display: block;
-}
+}*/
 
 @media screen and (min-width: 768px) {
   .btn-container {

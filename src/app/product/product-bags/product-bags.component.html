@@ -6,7 +6,17 @@
       alt=""
     />
   </div>
-  <ul class="menu-items">
+
+  <div (click)="toggleMenu()">
+    <i class="bx bx-menu bx-md" style="color: black"></i>
+  </div>
+</div>
+
+<!--PAREI EM 19 MINUTOS DE AULA-->>
+
+<!--
+  <div [ngClass]="{ 'hideText': openMenu }">HELLOW</div>
+    <ul class="menu-items">
     <li>Cart</li>
     <li>bags</li>
     <li>Cosmetic</li>
@@ -14,12 +24,6 @@
     <li>Acessories</li>
   </ul>
 
-  <div class="nav-bar-menu">
-    <i class="bx bx-menu bx-md" style="color: black"></i>
-  </div>
-</div>
-<!--
-  
    <div class="nav-bar-cart">
     <i class="bx bx-cart bx-md"></i>
   </div>
