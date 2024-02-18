@@ -1,3 +1,23 @@
+<div *ngIf="openMenu" [ngClass]="{'mobileMenu': openMenu}">
+  <div>
+    <i *ngIf="openMenu" 
+    (click)="toggleMenu()"
+     class="bx bx-x bx-lg menu-close"
+      style="color: rgb(31,31,31);"></i>
+  </div>
+  <!--PAREI EM 31 MINUTOS DE AULA-->
+  <ul>
+    <li><a>My Cart</a></li>
+    <li><a>Bags</a></li> 
+    <li><a>Makeup</a></li>
+    <li><a>Clothing</a></li>
+    <li><a>Acessories</a></li>
+    <li><a>Acessories</a></li>
+    
+  </ul>
+
+</div>
+
 <div class="nav-bar">
   <div class="nav-bar-logo">
     <img
@@ -7,12 +27,12 @@
     />
   </div>
 
-  <div (click)="toggleMenu()">
-    <i class="bx bx-menu bx-md" style="color: black"></i>
+  <div class="nav-bar-menu" (click)="toggleMenu()">
+    <i class="bx bx-menu bx-lg" style="color: black"></i>
   </div>
 </div>
 
-<!--PAREI EM 19 MINUTOS DE AULA-->>
+
 
 <!--
   <div [ngClass]="{ 'hideText': openMenu }">HELLOW</div>

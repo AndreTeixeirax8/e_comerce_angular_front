@@ -75,13 +75,44 @@
 .hideText {
   display: none;
 }
-/*.menu-items li {
-  display: none;
-}
 
 .nav-bar-menu {
-  display: block;
-}*/
+  margin: 1rem;
+}
+
+.nav-bar-logo{
+  margin: 1rem;
+}
+
+.mobileMenu{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(243, 236, 236,0.97);
+  text-align: center;
+  position:absolute;
+}
+
+.menu-close{
+  position: absolute;
+  right: 10px;
+  top:10px;
+}
+
+.mobileMenu ul{
+  margin-top: 7rem;
+}
+
+.mobileMenu ul li{
+  list-style: none;
+  margin: 2rem auto;
+}
+
+.mobileMenu ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
 
 @media screen and (min-width: 768px) {
   .btn-container {
