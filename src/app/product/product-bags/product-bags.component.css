@@ -72,6 +72,9 @@
 }
 
 /*/*NAV BAR MOBILE*/
+.menu-itens{
+display: none;
+}
 .hideText {
   display: none;
 }
@@ -85,11 +88,14 @@
 }
 
 .mobileMenu{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(243, 236, 236,0.97);
   text-align: center;
-  position:absolute;
+  position:fixed;
+  left: 0;
+  top: 0;
+  z-index: auto;
 }
 
 .menu-close{
@@ -99,18 +105,18 @@
 }
 
 .mobileMenu ul{
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 .mobileMenu ul li{
   list-style: none;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .mobileMenu ul li a{
   text-decoration: none;
   color: black;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 
@@ -143,7 +149,7 @@
     font-weight: 700;
     padding: 8px 20px;
     text-decoration: none;
-    color: white; /*PAREI EM 19 MINUTOS*/
+    color: white; 
   }
   .nav-bar-menu {
     display: block;
