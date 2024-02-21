@@ -8,6 +8,9 @@ import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { TitleTransformPipe } from './title.transform.pipe';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ProductClothingComponent } from './product-clothing/product-clothing.component';
+import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
+import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     ProductDetailComponent,
     SubCategoryComponent,
     NavbarComponent,
+    ProductClothingComponent,
+    ProductCosmeticsComponent,
+    ProductAccessoriesComponent,
   ],
   imports: [CommonModule, ProductRoutingModule, IvyCarouselModule],
 })

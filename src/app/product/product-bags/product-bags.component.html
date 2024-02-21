@@ -1,4 +1,4 @@
-<div *ngIf="openMenu" [ngClass]="{'mobileMenu': openMenu}">
+<!--<div *ngIf="openMenu" [ngClass]="{'mobileMenu': openMenu}">
   <div>
     <i *ngIf="openMenu" 
     (click)="toggleMenu()"
@@ -16,45 +16,9 @@
     
   </ul>
 
-</div>
+</div> -->
 
-<div class="nav-bar">
-  <div class="nav-bar-logo">
-    <img
-      class="logo-img"
-      src="https://ik.imagekit.io/cqjm5db3n/logo-topic+55.png?updatedAt=1708173965782"
-      alt=""
-    />
-  </div>
-
-  <div class="nav-bar-menu" (click)="toggleMenu()">
-    <i class="bx bx-menu bx-lg" style="color: black"></i>
-  </div>
-</div>
-
-
-
-<!--
-  <div [ngClass]="{ 'hideText': openMenu }">HELLOW</div>
-    <ul class="menu-items">
-    <li>Cart</li>
-    <li>bags</li>
-    <li>Cosmetic</li>
-    <li>Dress</li>
-    <li>Acessories</li>
-  </ul>
-
-   <div class="nav-bar-cart">
-    <i class="bx bx-cart bx-md"></i>
-  </div>
-
-    <img
-    class="banner"
-    src="https://ik.imagekit.io/cqjm5db3n/banner-dark_W5uq7Dv5o.jpg?updatedAt=1706028048888"
-  />
-
-  <div></div>
--->
+<app-navbar></app-navbar> 
 
 <div class="header">
   <h2 class="collection-header">Bags</h2>
