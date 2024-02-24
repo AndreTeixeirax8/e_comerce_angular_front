@@ -1,3 +1,67 @@
-<p>product-clothing works!</p>
+<!--<div *ngIf="openMenu" [ngClass]="{'mobileMenu': openMenu}">
+  <div>
+    <i *ngIf="openMenu" 
+    (click)="toggleMenu()"
+     class="bx bx-x bx-lg menu-close"
+      style="color: rgb(31,31,31);"></i>
+  </div>
+  
+  <ul>
+    <li><a>My Cart</a></li>
+    <li><a>Bags</a></li> 
+    <li><a>Makeup</a></li>
+    <li><a>Clothing</a></li>
+    <li><a>Acessories</a></li>
+    <li><a>Acessories</a></li>
+    
+  </ul>
 
-COPIAR PARA AQUI PAREI EM 17:37
+</div> -->
+
+<app-navbar></app-navbar> 
+
+<div class="header">
+  <h2 class="collection-header">Bags</h2>
+</div>
+
+<div class="btn-container">
+  <div class="btn">Purses</div>
+  <div class="btn">Designer Bags</div>
+  <div class="btn">Shouder Bags</div>
+  <div class="btn">Travel Bags</div>
+</div>
+
+<div class="product-list-container">
+  <div class="product-list">
+    <img
+      class="product-img"
+      src="https://ik.imagekit.io/cqjm5db3n/21789859-1-nero-removebg-preview_wgW5IS-k3.png?updatedAt=1706028046950"
+      alt=""
+    />
+    <h5 class="product-list-text">Purses</h5>
+  </div>
+  <div class="product-list" [routerLink]="['designerbags']">
+    <img
+      class="product-img"
+      src="https://ik.imagekit.io/cqjm5db3n/202649543-1-pink-removebg-preview_VSV6qfVeQ.png?updatedAt=1706028047460"
+      alt=""
+    />
+    <h5 class="product-list-text">Designer Bags</h5>
+  </div>
+  <div class="product-list" [routerLink]="['shoulderbags']">
+    <img
+      class="product-img"
+      src="https://ik.imagekit.io/cqjm5db3n/201868254-1-black_2b00csX-_.png?updatedAt=1706028048511"
+      alt=""
+    />
+    <h5 class="product-list-text">Shouder Bags</h5>
+  </div>
+  <div class="product-list">
+    <img
+      class="product-img"
+      src="https://ik.imagekit.io/cqjm5db3n/purse-removebg-preview_Dg2F0Tc4V.png?updatedAt=1706028048359"
+      alt=""
+    />
+    <h5 class="product-list-text">Travel Bags</h5>
+  </div>
+</div>
