@@ -4,6 +4,8 @@ import { ProductHomeComponent } from './product-home/product-home.component';
 import { ProductBagsComponent } from './product-bags/product-bags.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SubCategoryComponent } from './sub-category/sub-category.component';
+import { ProductClothingComponent } from './product-clothing/product-clothing.component';
+import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,15 @@ const routes: Routes = [
     path: 'bags',
     component: ProductBagsComponent,
   },
+  {
+    path: 'clothing',
+    component: ProductClothingComponent,
+  },
+  {
+    path: 'accessories',
+    component: ProductAccessoriesComponent,
+  },
+  
   {
     path: 'detail/:id',
     component: ProductDetailComponent,
