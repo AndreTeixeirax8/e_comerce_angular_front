@@ -6,6 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
+import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
     path: 'accessories',
     component: ProductAccessoriesComponent,
   },
+  {
+    path: 'cosmetics',
+    component: ProductCosmeticsComponent,
+  },
+   
   
   {
     path: 'detail/:id',
