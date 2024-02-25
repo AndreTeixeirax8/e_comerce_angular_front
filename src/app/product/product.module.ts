@@ -11,6 +11,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
 import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
+import { ProductCreateComponent } from './product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductAccessoriesComponent } from './product-accessories/product-acces
     ProductClothingComponent,
     ProductCosmeticsComponent,
     ProductAccessoriesComponent,
+    ProductCreateComponent,
   ],
   imports: [CommonModule, ProductRoutingModule, IvyCarouselModule],
 })
