@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-product-create',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCreateComponent implements OnInit {
 
-  constructor() { }
+  productForm =this.formBuilder.group({
+    title:[''],
+  })
+
+  onSubmit(){
+    console.log('VALUE', this.productForm.value)
+  }
+
+  constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
   }
