@@ -20,4 +20,8 @@ export class ProductService {
   getProductDetailById(id: any) {
     return this.http.get(this.apiUrl + '/product/' + id);
   }
+
+  createProduct(product:any){
+    return this.http.post(this.apiUrl + '/product',product).subscribe()
+  }
 }

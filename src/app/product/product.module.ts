@@ -12,6 +12,7 @@ import { ProductClothingComponent } from './product-clothing/product-clothing.co
 import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,11 @@ import { ProductCreateComponent } from './product-create/product-create.componen
     ProductAccessoriesComponent,
     ProductCreateComponent,
   ],
-  imports: [CommonModule, ProductRoutingModule, IvyCarouselModule],
+  imports: [
+    CommonModule,
+    ProductRoutingModule,
+    IvyCarouselModule,
+    ReactiveFormsModule
+      ],
 })
 export class ProductModule {}

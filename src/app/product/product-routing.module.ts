@@ -7,8 +7,13 @@ import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
+import { ProductCreateComponent } from './product-create/product-create.component';
 
 const routes: Routes = [
+  {
+    path:'create',
+    component:ProductCreateComponent,
+  },
   {
     path: 'bags/:id',
     component: SubCategoryComponent,
