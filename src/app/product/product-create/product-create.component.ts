@@ -10,6 +10,7 @@ export class ProductCreateComponent implements OnInit {
 
   productForm =this.formBuilder.group({
     title:[''],
+    description:['']
   })
 
   onSubmit(){

@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 
-<form [formGroup]="productForm">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
 
-    <input type="text" formControlName="title">
-    PAREI EM 18:40
+    <input class="product-input" placeholder="Title" type="text" formControlName="title">
+    <input class="product-input" placeholder="Description" type="text" formControlName="description">
 
 </form>
