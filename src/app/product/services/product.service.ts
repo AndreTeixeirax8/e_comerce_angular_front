@@ -22,6 +22,6 @@ export class ProductService {
   }
 
   createProduct(product:any){
-    return this.http.post(this.apiUrl + '/product',product).subscribe(data => console.log('data',data))
+    return this.http.post(this.apiUrl + '/product',product).subscribe()
   }
 }

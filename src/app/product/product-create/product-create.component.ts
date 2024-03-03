@@ -26,7 +26,7 @@ export class ProductCreateComponent implements OnInit {
   })
 
   onSubmit(){
-    console.log('VALUE', this.productForm.value)
+   // console.log('VALUE', this.productForm.value)
     this.productService.createProduct(this.productForm.value)
     this.productForm.reset()
   }
