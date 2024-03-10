@@ -22,7 +22,7 @@
   <h2 class="collection-header">{{ routeName | titleTransform }}</h2>
 </div>
 
-<div class="content-container">
+<div class="content-container" *ngIf="subProducts !== undefined; else elseBlock">
   <div class="best-seller-container">
     <h3 class="collection-title">Best seller</h3>
     <img
@@ -43,3 +43,5 @@
     </div>
   </div>
 </div>
+
+<ng-template #elseBlock>Produto não localizado</ng-template>

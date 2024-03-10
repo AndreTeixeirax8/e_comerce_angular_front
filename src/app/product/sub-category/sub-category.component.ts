@@ -25,7 +25,14 @@ export class SubCategoryComponent implements OnInit {
         .getProductsBySubCategory(data['id'])
         .subscribe((products) => {
           console.log('products', products);
-          this.subProducts = products;
+
+          if(Object.keys(products).length !== 0){
+            this.subProducts = products;
+          }else{
+             this.subProducts = undefined
+          }
+
+          
         });
     });
   }
