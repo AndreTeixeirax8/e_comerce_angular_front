@@ -30,7 +30,7 @@ const routes: Routes = [
     path: 'clothing',
     component: ProductClothingComponent,
   },
-  {   //PAREI EM 16:30
+  {   
     path: 'clothing/:id',
     component: SubCategoryComponent, //trocar a subcategoria ???
   },
@@ -38,11 +38,19 @@ const routes: Routes = [
     path: 'accessories',
     component: ProductAccessoriesComponent,
   },
+  {   
+    path: 'accessories/:id',
+    component: SubCategoryComponent, //trocar a subcategoria ???
+  },
   {
     path: 'cosmetics',
     component: ProductCosmeticsComponent,
   },
    
+  {   
+    path: 'cosmetics/:id',
+    component: SubCategoryComponent, //trocar a subcategoria ???
+  },
   
   {
     path: 'detail/:id',
