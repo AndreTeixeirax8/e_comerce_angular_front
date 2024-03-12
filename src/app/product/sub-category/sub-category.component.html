@@ -38,8 +38,10 @@
     <div class="product-list" *ngFor="let product of subProducts">
       <div class="product-container" [routerLink]="['/detail', product.id]">
         <img class="product-img" [src]="product.imgUrl1" alt="" />
-        <h5 class="product-list-text">{{ product.brands }}</h5>
+        <h5 class="product-list-text">{{product.brands}}</h5>
       </div>
+      <h5 class="product-list-text">{{product.title}}</h5>
+      <button (click)="deleteProduct(product.id)">Delete</button>
     </div>
   </div>
 </div>

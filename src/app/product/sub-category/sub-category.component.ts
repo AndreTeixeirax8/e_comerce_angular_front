@@ -18,6 +18,21 @@ export class SubCategoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.fetchProduct()
+  }
+
+  deleteProduct(id:any){
+    this.productService.deleteProduct(id).subscribe(
+      res =>{
+        if(res === 'DELETED'){
+          this.fetchProduct()
+        }
+        return
+      }
+    )
+  }
+
+  fetchProduct(){
     this.activatedRoute.params.subscribe((data: any) => {
       console.log('data', data['id']);
       this.routeName = data['id'];
@@ -36,4 +51,5 @@ export class SubCategoryComponent implements OnInit {
         });
     });
   }
+
 }

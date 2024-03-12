@@ -22,6 +22,10 @@ export class ProductService {
   }
 
   createProduct(product:any){
-    return this.http.post(this.apiUrl + '/product',product).subscribe()
+    return this.http.post(this.apiUrl + '/product',product).subscribe()//falta uma barra no produto????
+  }
+
+  deleteProduct(id:any){
+    return this.http.delete(this.apiUrl + '/product/' + id,{responseType:'text'})
   }
 }
