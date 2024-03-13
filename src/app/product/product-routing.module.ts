@@ -8,11 +8,16 @@ import { ProductClothingComponent } from './product-clothing/product-clothing.co
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 const routes: Routes = [
   {
     path:'create',
     component:ProductCreateComponent,
+  },
+  {
+    path:'edit/:id',
+    component:ProductEditComponent
   },
   {
     path: 'bags/:id',

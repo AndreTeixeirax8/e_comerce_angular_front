@@ -42,6 +42,7 @@
       </div>
       <h5 class="product-list-text">{{product.title}}</h5>
       <button (click)="deleteProduct(product.id)">Delete</button>
+      <button [routerLink]="['/edit',product.id]">Edit</button>
     </div>
   </div>
 </div>
