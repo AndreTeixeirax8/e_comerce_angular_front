@@ -13,6 +13,7 @@ import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductCosmeticsComponent,
     ProductAccessoriesComponent,
     ProductCreateComponent,
+    ProductEditComponent,
   ],
   imports: [
     CommonModule,
