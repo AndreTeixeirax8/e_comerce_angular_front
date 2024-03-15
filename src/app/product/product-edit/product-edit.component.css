@@ -1,0 +1,15 @@
+input[type=text]{
+    padding: 10px;
+    margin: 20px auto;
+    border: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/*PAREI EM 30 MINUTOS*/

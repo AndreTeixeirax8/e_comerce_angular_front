@@ -1,7 +1,17 @@
 <app-navbar></app-navbar>
 <div>
     <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-        <input placeholder="title" type="text" formControlName="title">
+        <input class="product-input"  placeholder="title" type="text" formControlName="title">
+        <input class="product-input"  placeholder="description" type="text" formControlName="description">
+        <input class="product-input"   placeholder="imgUrl1" type="text" formControlName="imgUrl1">
+        <input placeholder="price" type="text" formControlName="price">
+        <input placeholder="quantity" type="text" formControlName="quantity">
+        <input placeholder="color" type="text" formControlName="color">
+        <input placeholder="shippings" type="text" formControlName="shippings">
+        <input placeholder="sex" type="text" formControlName="sex">
+        <input placeholder="brands" type="text" formControlName="brands">
+        <input placeholder="category" type="text" formControlName="category">
+        <input placeholder="subcategory" type="text" formControlName="subcategory">
 
     </form>
 </div>

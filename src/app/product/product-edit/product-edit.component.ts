@@ -13,6 +13,10 @@ export class ProductEditComponent implements OnInit {
   productForm:any
   product:any
 
+  setValue(){
+    this.productForm.get('title').setValue(this.product.title)
+  }
+
   constructor(
     private activatedRoute:ActivatedRoute,
     private productService:ProductService,
@@ -43,6 +47,7 @@ export class ProductEditComponent implements OnInit {
 
         if(Object.keys(data).length !==0){
           this.product =data 
+          this.setValue()
         }else{
           this.product = undefined
         }
