@@ -11,6 +11,7 @@ import { FormBuilder } from '@angular/forms';
 export class ProductEditComponent implements OnInit {
 
   productForm:any
+  product:any
 
   constructor(
     private activatedRoute:ActivatedRoute,
@@ -34,6 +35,19 @@ export class ProductEditComponent implements OnInit {
       brands:[''],
       category:[''],
       subcategory:[''],
+    })
+
+    this.activatedRoute.params.subscribe(url =>{
+      this.productService.getProductDetailById(url['id'])
+      .subscribe(data =>{
+
+        if(Object.keys(data).length !==0){
+          this.product =data 
+        }else{
+          this.product = undefined
+        }
+
+      })
     })
   }
 
