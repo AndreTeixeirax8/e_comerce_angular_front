@@ -12,4 +12,6 @@ input[type=text]{
     font-size: inherit;
 }
 
-/*PAREI EM 30 MINUTOS*/
+input[type=text]:focus{
+    outline: none;
+}
