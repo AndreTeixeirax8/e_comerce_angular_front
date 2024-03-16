@@ -15,6 +15,19 @@ export class ProductEditComponent implements OnInit {
 
   setValue(){
     this.productForm.get('title').setValue(this.product.title)
+    this.productForm.get('description').setValue(this.product.description)
+    this.productForm.get('imgUrl1').setValue(this.product.imgUrl1)
+    this.productForm.get('price').setValue(this.product.price)
+    this.productForm.get('quantity').setValue(this.product.quantity)
+    this.productForm.get('color').setValue(this.product.color)
+    this.productForm.get('color').setValue(this.product.color)
+    this.productForm.get('shippings').setValue(this.product.shippings)
+    this.productForm.get('sex').setValue(this.product.sex)
+    this.productForm.get('brands').setValue(this.product.brands)
+    this.productForm.get('category').setValue(this.product.category)
+    this.productForm.get('subcategory').setValue(this.product.subcategory)
+    
+    //parei em 34minutos
   }
 
   constructor(
