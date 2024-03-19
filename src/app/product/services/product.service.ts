@@ -28,4 +28,9 @@ export class ProductService {
   deleteProduct(id:any){
     return this.http.delete(this.apiUrl + '/product/' + id,{responseType:'text'})
   }
+
+  editProduct(id:any,product:any){
+    return this.http.patch(this.apiUrl + '/product/' + id,product)
+  }
+
 }

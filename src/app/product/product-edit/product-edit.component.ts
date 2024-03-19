@@ -27,7 +27,7 @@ export class ProductEditComponent implements OnInit {
     this.productForm.get('category').setValue(this.product.category)
     this.productForm.get('subcategory').setValue(this.product.subcategory)
     
-    //parei em 34minutos
+  
   }
 
   constructor(
@@ -71,7 +71,12 @@ export class ProductEditComponent implements OnInit {
 
   onSubmit()
   {
-
+    this.productService.editProduct(this.product.id, this.productForm.value)
+    .subscribe(
+      ()=>{
+        this.router.navigate(['/'+this.product.category +'/',this.product.subcategory])
+      }
+    )
   }
 
 }
