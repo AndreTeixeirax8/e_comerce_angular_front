@@ -35,5 +35,6 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     IvyCarouselModule,
     ReactiveFormsModule
       ],
+      exports:[NavbarComponent]
 })
 export class ProductModule {}

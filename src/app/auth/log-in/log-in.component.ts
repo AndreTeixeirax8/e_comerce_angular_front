@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-log-in',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  loginForm = this.formBuilder.group({
+    username:[''],
+    password:['']
+  })
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService:AuthService
+
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.authService.userLogin(this.loginForm.value).subscribe(
+      (token:any) => {
+        console.log(token.access_token)
+      }
+    ) 
   }
 
 }
