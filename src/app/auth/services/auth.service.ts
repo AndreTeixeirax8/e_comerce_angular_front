@@ -14,4 +14,9 @@ export class AuthService {
     return this.http.post(this.apiUrl+'/auth/login',user )
   }
 
+  //PAREI EM 36 MINUTOS
+  getAuthToken(){
+    return window.localStorage.getItem('token')
+  }
+
 }

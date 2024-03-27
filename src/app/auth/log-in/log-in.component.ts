@@ -27,6 +27,9 @@ export class LogInComponent implements OnInit {
     this.authService.userLogin(this.loginForm.value).subscribe(
       (token:any) => {
         console.log(token.access_token)
+        if(token){
+          window.localStorage.setItem('token',token.access_token)
+        }
       }
     ) 
   }
