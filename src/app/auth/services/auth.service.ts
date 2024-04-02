@@ -23,4 +23,8 @@ export class AuthService {
     return window.localStorage.getItem('token')
   }
 
+  veridiedUser(token:any){
+    return this.http.get(this.apiUrl +'/users/auth' + token)
+  }
+
 }

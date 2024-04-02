@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-sub-category',
@@ -12,12 +13,16 @@ export class SubCategoryComponent implements OnInit {
   subProducts: any;
   routeName: any;
 
+  isUserAuthenticated:any
+
   constructor(
     private activatedRoute: ActivatedRoute,
-    public productService: ProductService
+    public productService: ProductService,
+    private authService:AuthService
   ) {}
 
   ngOnInit(): void {
+    this.authUser()
     this.fetchProduct()
   }
 
@@ -50,6 +55,29 @@ export class SubCategoryComponent implements OnInit {
           
         });
     });
+  }
+
+
+  authUser(){
+    let token: any = window.localStorage.getItem('token')
+
+    if(!token){
+      this.isUserAuthenticated = false
+    }
+
+    if(token){
+      this.authService.veridiedUser(token).subscribe((data:any)=>{
+        console.log('get token ',data)
+
+        if(data){
+          if(data.message && data.message === 'jwt expired'){
+            console.log('jwt expired cod block runs ', data)
+          }
+        }
+
+      })
+    }
+
   }
 
 }
