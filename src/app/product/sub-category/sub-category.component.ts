@@ -69,9 +69,16 @@ export class SubCategoryComponent implements OnInit {
       this.authService.veridiedUser(token).subscribe((data:any)=>{
         console.log('get token ',data)
 
+        //PAREI EM 41:20
+
         if(data){
           if(data.message && data.message === 'jwt expired'){
             console.log('jwt expired cod block runs ', data)
+            this.isUserAuthenticated =false;
+          }else if(data.message && data.message === 'Not authorized'){
+            this.isUserAuthenticated =false;
+          }else if (data && data === 'Authorized'){
+            this.isUserAuthenticated =true;
           }
         }
 
