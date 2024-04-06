@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-log-in',
@@ -16,7 +17,8 @@ export class LogInComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService:AuthService
+    private authService:AuthService,
+    private router :Router
 
     ) { }
 
@@ -28,6 +30,7 @@ export class LogInComponent implements OnInit {
       (token:any) => {
         console.log(token.access_token)
         if(token){
+          this.router.navigate(['/'])
           window.localStorage.setItem('token',token.access_token)
         }
       }

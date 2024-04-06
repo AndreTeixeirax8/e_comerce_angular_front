@@ -9,11 +9,13 @@ import { ProductAccessoriesComponent } from './product-accessories/product-acces
 import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
     path:'create',
     component:ProductCreateComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'edit/:id',
