@@ -24,7 +24,7 @@ export class AuthService {
   }
 
   veridiedUser(token:any){
-    return this.http.get(this.apiUrl +'/users/auth' + token)
+    return this.http.get(this.apiUrl +'/users/auth/' + token)
   }
 
 }

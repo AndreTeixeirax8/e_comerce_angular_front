@@ -69,7 +69,7 @@ export class SubCategoryComponent implements OnInit {
       this.authService.veridiedUser(token).subscribe((data:any)=>{
         console.log('get token ',data)
 
-        //PAREI EM 41:20
+      
 
         if(data){
           if(data.message && data.message === 'jwt expired'){

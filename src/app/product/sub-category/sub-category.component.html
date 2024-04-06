@@ -41,8 +41,9 @@
         <h5 class="product-list-text">{{product.brands}}</h5>
       </div>
       <h5 class="product-list-text">{{product.title}}</h5>
-      <button (click)="deleteProduct(product.id)">Delete</button>
-      <button [routerLink]="['/edit',product.id]">Edit</button>
+      <!--ESSA AUTENTICACAO NG IF ESTÁ COM FALHA-->
+      <button *ngIf="isUserAuthenticated" (click)="deleteProduct(product.id)">Delete</button>
+      <button *ngIf="isUserAuthenticated"  [routerLink]="['/edit',product.id]">Edit</button>
     </div>
   </div>
 </div>
