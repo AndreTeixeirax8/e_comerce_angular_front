@@ -13,7 +13,7 @@ export class SubCategoryComponent implements OnInit {
   subProducts: any;
   routeName: any;
 
-  isUserAuthenticated:any
+  isUserAuthenticated =false
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -60,7 +60,8 @@ export class SubCategoryComponent implements OnInit {
 
   authUser(){
     let token: any = window.localStorage.getItem('token')
-
+   console.log("valor do token")
+   console.log(token)
     if(!token){
       this.isUserAuthenticated = false
     }
@@ -69,7 +70,7 @@ export class SubCategoryComponent implements OnInit {
       this.authService.veridiedUser(token).subscribe((data:any)=>{
         console.log('get token ',data)
 
-      
+      ///VERIFICAR IMPLEMENTAÇÃO ESTÁ FALHANDO
 
         if(data){
           if(data.message && data.message === 'jwt expired'){
@@ -80,8 +81,9 @@ export class SubCategoryComponent implements OnInit {
           }else if (data && data === 'Authorized'){
             this.isUserAuthenticated =true;
           }
+          console.log('isUserAuthenticated:', this.isUserAuthenticated);
         }
-
+        
       })
     }
 
