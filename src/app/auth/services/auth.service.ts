@@ -24,6 +24,8 @@ export class AuthService {
   }
 
   veridiedUser(token:any){
+    console.log("chegou na verificacao com o token")
+    console.log(token)
     return this.http.get(this.apiUrl +'/users/auth/' + token)
   }
 
