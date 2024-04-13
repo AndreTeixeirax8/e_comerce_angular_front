@@ -60,23 +60,21 @@ export class SubCategoryComponent implements OnInit {
 
   authUser(){
     let token: any = window.localStorage.getItem('token')
-    console.log("Valor do token:", token); // Adicione este console.log para verificar o valor do token
+    console.log("Valor do token:", token); 
 
     if(!token){
-      this.isUserAuthenticated = false  //por que aqui recebe false se o toke está presente?
+      this.isUserAuthenticated = false  
     }
 
     if(token){
       this.authService.veridiedUser(token).subscribe((data:any)=>{
-        console.log('valor do data ',data)
+        
 
       
         if(data){
-          console.log("SE DATA FOR TRUE ELE ENTRA AQUI ")
-          console.log("valor da mensage")
-          console.log(data.mensage)
+          
           if(data.message && data.message === 'jwt expired'){
-            console.log('PERDEU VALOR DO TOKEN  ', data)
+          
             this.isUserAuthenticated =false;
           }else if(data.message && data.message === 'Not authorized'){
             this.isUserAuthenticated =false;
