@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  isDesktop: boolean = false;
   openMenu: boolean = false;
   isUserAuthenticated:any
   constructor(
@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.authUser()
+    this.checkIfDesktop();
   }
 
   toggleMenu() {
@@ -39,8 +40,11 @@ export class NavbarComponent implements OnInit {
         }
       })
     }
+  }
 
-
+  checkIfDesktop() {
+    // Verifica se a largura da tela é maior que 768px (tamanho considerado para a versão desktop)
+    this.isDesktop = window.innerWidth > 768;
   }
 
 }
