@@ -18,6 +18,7 @@
           <li><a>Contact</a></li>
           <li><a [routerLink]="['/auth/login']">Login</a></li>
           <li *ngIf="isUserAuthenticated"><a [routerLink]="['/create']">Criar</a></li>
+          <li><a (click)="logout()">Sair</a></li> <!-- Botão "Sair" -->
       </ul>
     </div>
   

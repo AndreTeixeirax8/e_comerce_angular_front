@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,8 @@ export class NavbarComponent implements OnInit {
   openMenu: boolean = false;
   isUserAuthenticated:any
   constructor(
-    private authService:AuthService
+    private authService:AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -45,6 +47,13 @@ export class NavbarComponent implements OnInit {
   checkIfDesktop() {
     // Verifica se a largura da tela é maior que 768px (tamanho considerado para a versão desktop)
     this.isDesktop = window.innerWidth > 768;
+  }
+
+  logout() {
+    // Limpa o token armazenado
+    window.localStorage.removeItem('token');
+    // Redireciona para a tela de login
+    this.router.navigate(['/auth/login']);
   }
 
 }
