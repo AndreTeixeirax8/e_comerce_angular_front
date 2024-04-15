@@ -12,7 +12,14 @@
     <input class="product-input" placeholder="Shippings" type="text" formControlName="shippings">
     <input class="product-input" placeholder="Sex" type="text" formControlName="sex">
     <input class="product-input" placeholder="Brands" type="text" formControlName="brands">
-    <input class="product-input" placeholder="Category" type="text" formControlName="category">
+    <!-- Adicione um select para a categoria -->
+    <select class="product-input" formControlName="category">
+        <!-- Defina as opções de categoria -->
+        <option value="Clothing">Clothing</option>
+        <option value="Bags">Bags</option>
+        <option value="Cosmetics">Cosmetics</option>
+        <!-- Adicione mais opções conforme necessário -->
+    </select>
     <input class="product-input" placeholder="Subcategory" type="text" formControlName="subcategory">
   
     <div class="btn-container">

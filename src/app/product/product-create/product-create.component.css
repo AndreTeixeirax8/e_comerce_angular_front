@@ -36,3 +36,24 @@ input[type=text]:focus{
     margin: 1rem auto;
     
 }
+
+/* Estilo para o campo de seleção */
+select.product-input {
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+/* Estilo para o campo de seleção quando estiver em foco */
+select.product-input:focus {
+    outline: none;
+}
