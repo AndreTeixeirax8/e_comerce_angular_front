@@ -10,7 +10,12 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [HttpClientModule, BrowserModule, AppRoutingModule,ReactiveFormsModule],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule
+  ],
   providers: [
     {
       provide:HTTP_INTERCEPTORS,

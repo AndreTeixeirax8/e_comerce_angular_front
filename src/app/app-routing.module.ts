@@ -7,21 +7,7 @@ import { ProductClothingComponent } from './product/product-clothing/product-clo
 import { ProductAccessoriesComponent } from './product/product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 
-/* antiga rota
-const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () =>
-      import('./product/product.module').then((a) => a.ProductModule),
-  },
-  {
-    path:'auth',
-    loadChildren: () =>
-    import('./auth/auth.module').then(
-      a => a.AuthModule
-    )
-  }
-];*/
+
 
 const routes: Routes = [
   {
