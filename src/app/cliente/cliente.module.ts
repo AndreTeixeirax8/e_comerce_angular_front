@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../product/shared/navbar/navbar.component';
+import { NavbarComponent } from 'src/app/product/shared/navbar';
 
 
 @NgModule({
