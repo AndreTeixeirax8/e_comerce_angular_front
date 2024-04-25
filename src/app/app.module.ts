@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './auth/auth-interceptor-service';
 import { AuthGuard } from './auth/auth.guard';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { ClienteModule } from './cliente';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,ClienteModule
   ],
   providers: [
     {

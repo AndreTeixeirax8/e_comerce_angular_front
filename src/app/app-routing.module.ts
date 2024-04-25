@@ -6,6 +6,7 @@ import { ProductBagsComponent } from './product/product-bags/product-bags.compon
 import { ProductClothingComponent } from './product/product-clothing/product-clothing.component';
 import { ProductAccessoriesComponent } from './product/product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ClienteCreateComponent } from './cliente/cria-cliente/cliente-create.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () =>
       import('./product/product.module').then((a) => a.ProductModule),
+     
   },
   {
     path: 'bags',
@@ -40,6 +42,13 @@ const routes: Routes = [
     component: ProductCreateComponent,
     canActivate: [AuthGuard] 
   },
+
+  {
+    path: 'createCliente',
+    component: ClienteCreateComponent,
+    canActivate: [AuthGuard] 
+  },
+
   {
     path: 'accessories',
     component: ProductAccessoriesComponent,

@@ -1,27 +1,13 @@
 <app-navbar></app-navbar>
 
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
 
-    <input class="product-input" placeholder="Title" type="text" formControlName="title">
-    <input class="product-input" placeholder="Description" type="text" formControlName="description">
-    <input class="product-input" placeholder="imgUrl1" type="text" formControlName="imgUrl1">
-    <input class="product-input" placeholder="Price" type="text" formControlName="price">
-    <input class="product-input" placeholder="Quantity" type="text" formControlName="quantity">
-    <input class="product-input" placeholder="Size" type="text" formControlName="size">
-    <input class="product-input" placeholder="Color" type="text" formControlName="color">
-    <input class="product-input" placeholder="Shippings" type="text" formControlName="shippings">
-    <input class="product-input" placeholder="Sex" type="text" formControlName="sex">
-    <input class="product-input" placeholder="Brands" type="text" formControlName="brands">
-    <!-- Adicione um select para a categoria -->
-    <select class="product-input" formControlName="category">
-        <!-- Defina as opções de categoria -->
-        <option value="Clothing">Clothing</option>
-        <option value="Bags">Bags</option>
-        <option value="Cosmetics">Cosmetics</option>
-        <!-- Adicione mais opções conforme necessário -->
-    </select>
-    <input class="product-input" placeholder="Subcategory" type="text" formControlName="subcategory">
+    <input class="cliente-input" placeholder="Nome" type="text" formControlName="nome">
+    <input class="cliente-input" placeholder="Cpf" type="text" formControlName="cpf">
+    <input class="cliente-input" placeholder="email" type="text" formControlName="email">
   
+  
+   
     <div class="btn-container">
         <button class="submit-btn">
             Submit

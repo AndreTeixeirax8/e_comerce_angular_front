@@ -1,42 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-//import { ProductService } from '../services/product.service';
+import { ClienteService } from '../cliente.service';
 
-
-//CONTINUAR O AJUSTE AQUI
 
 @Component({
-  selector: 'app-product-create',
-  templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.css']
+  selector: 'app-cliente-create',
+  templateUrl: './cliente-create.component.html',
+  styleUrls: ['./cliente-create.component.css']
 })
-export class ProductCreateComponent implements OnInit {
+export class ClienteCreateComponent implements OnInit {
 
-  productForm =this.formBuilder.group({
-    title:[''],
-    description:[''],
-    imgUrl1:[''],
-    price:[''],
-    quantity:[''],
-    size:[''],
-    color:[''],
-    shippings:[''],
-    sex:[''],
-    brands:[''],
-    category:[''],
-    subcategory:[''],
+  clienteForm =this.formBuilder.group({
+    nome:[''],
+    cpf:[''],
+    email:[''],
     
   })
 
   onSubmit(){
    // console.log('VALUE', this.productForm.value)
-   // this.productService.createProduct(this.productForm.value)
-    this.productForm.reset()
+    this.clienteService.criaCliente(this.clienteForm.value)
+    this.clienteForm.reset()
   }
 
   constructor(
     private formBuilder:FormBuilder,
-    //private productService: ProductService,
+    private clienteService: ClienteService,
     ) { }
 
   ngOnInit(): void {
