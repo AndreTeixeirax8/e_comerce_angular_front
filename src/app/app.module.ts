@@ -10,7 +10,8 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ClienteModule } from './cliente';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,

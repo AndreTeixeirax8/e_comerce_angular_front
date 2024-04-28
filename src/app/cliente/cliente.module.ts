@@ -6,10 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductModule } from '../product/product.module';
 import { ClienteListaComponent } from './cliente-lista/cliente-lista.component'; 
+import { Navbar2Component } from '../common/navbar2/navbar2.component';
 
 @NgModule({
   declarations: [    
-   ClienteCreateComponent, ClienteListaComponent,
+   ClienteCreateComponent,
+    ClienteListaComponent,
+    Navbar2Component,
    
   ],
   imports: [
@@ -20,6 +23,7 @@ import { ClienteListaComponent } from './cliente-lista/cliente-lista.component';
     ProductModule
   
   ],
+  exports: [Navbar2Component],
   
 })
 export class ClienteModule {}
