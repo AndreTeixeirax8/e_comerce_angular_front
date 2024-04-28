@@ -37,7 +37,7 @@ input[type=text]:focus{
     
 }
 
-/* Estilo para o campo de seleção */
+
 select.product-input {
     padding: 10px;
     margin: 20px auto;
@@ -53,7 +53,6 @@ select.product-input {
     outline: none;
 }
 
-/* Estilo para o campo de seleção quando estiver em foco */
 select.product-input:focus {
     outline: none;
 }

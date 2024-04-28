@@ -1,13 +1,10 @@
-<p>cliente-lista works!</p>
-
-<div>
+<app-navbar></app-navbar>
+<div class="list-container">
     <h2>Lista de Clientes</h2>
     <ul>
-      <li *ngFor="let cliente of clientes">
-        <!-- Aqui você pode exibir as informações de cada cliente -->
-        <p>{{ cliente.nome }}</p>
-        <p>{{ cliente.email }}</p>
-        <!-- Adicione outras informações do cliente conforme necessário -->
-      </li>
+        <li *ngFor="let cliente of clientes" class="list-item">
+            <p class="list-item-title">{{ cliente.nome }}</p>
+            <p class="list-item-description">{{ cliente.email }}</p>
+        </li>
     </ul>
-  </div>
+</div>
