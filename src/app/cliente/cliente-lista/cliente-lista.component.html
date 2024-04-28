@@ -1,0 +1,13 @@
+<p>cliente-lista works!</p>
+
+<div>
+    <h2>Lista de Clientes</h2>
+    <ul>
+      <li *ngFor="let cliente of clientes">
+        <!-- Aqui você pode exibir as informações de cada cliente -->
+        <p>{{ cliente.nome }}</p>
+        <p>{{ cliente.email }}</p>
+        <!-- Adicione outras informações do cliente conforme necessário -->
+      </li>
+    </ul>
+  </div>
