@@ -8,6 +8,8 @@ import { AuthInterceptorService } from './auth/auth-interceptor-service';
 import { AuthGuard } from './auth/auth.guard';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ClienteModule } from './cliente';
+import { AtendimentoModule } from './atendimento/cria-atendimento.module';
+
 
 @NgModule({
   declarations: [AppComponent
@@ -16,7 +18,9 @@ import { ClienteModule } from './cliente';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,ClienteModule
+    ReactiveFormsModule,
+    ClienteModule,
+    AtendimentoModule
   ],
   providers: [
     {
