@@ -1,3 +1,4 @@
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -62,7 +63,7 @@
   flex-direction: column;
   height: 180px;
   width: 180px;
-  background-color: rgb(230, 229, 229);
+  background-color: rgb(87, 84, 84);
   justify-content: center;
   margin: 0.5rem;
   cursor: pointer;

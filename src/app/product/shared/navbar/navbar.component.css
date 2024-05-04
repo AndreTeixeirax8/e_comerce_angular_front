@@ -5,6 +5,7 @@
   justify-content: space-between;
   min-height: 80px;
   overflow: hidden; /* Garanta que os itens do menu não vazem para fora do contêiner */
+  background-color: rgba(0, 0, 0, 0.7)!important;  /* Define a cor de fundo escura com transparência */
 }
 
 .nav-bar-background {
@@ -19,12 +20,14 @@
   background-size: cover;
   z-index: 1; /* Garanta que a imagem de fundo esteja atrás dos outros elementos */
   transition: opacity 0.3s ease; /* Adicione uma transição suave para o efeito de desaparecimento */
+ 
 }
 
 .nav-bar-menu {
   position: relative;
   z-index: 2; /* Garanta que o ícone do menu esteja na frente da imagem de fundo */
   margin: 1rem;
+ 
 }
 
 .mobileMenu {
