@@ -5,7 +5,7 @@ import { AtendimentoService } from '../atendimento.service';
 @Component({
   selector: 'app-atendimento-create',
   templateUrl: './cria-atendimento.component.html',
-  styleUrls: ['./novo-componente.css']
+  styleUrls: ['./cria-atendimento.component.css']
 })
 export class CriaAtendimentoComponent implements OnInit {
 
