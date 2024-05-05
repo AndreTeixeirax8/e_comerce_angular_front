@@ -56,3 +56,25 @@ input[type=text]{
  select.product-input:focus {
      outline: none;
  }
+
+ /* estilo do select*/
+ input[type=text],
+select.atendimento-input {
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+input[type=text]:focus,
+select.atendimento-input:focus {
+    outline: none;
+}

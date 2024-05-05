@@ -2,7 +2,10 @@
 
 <form [formGroup]="atendimentoForm" (ngSubmit)="onSubmit()">
 
-    <input class="atendimento-input" placeholder="Cliente" type="text" formControlName="cliente">
+    <select class="atendimento-input" formControlName="cliente">
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+      </select>
+ 
     <input class="atendimento-input" placeholder="Observacoes" type="text" formControlName="observacoes">
     <input class="atendimento-input" placeholder="Tipo_servico" type="text" formControlName="tipo_servico">
     <input class="atendimento-input" placeholder="Atendimento_via" type="text" formControlName="atendimento_via">
