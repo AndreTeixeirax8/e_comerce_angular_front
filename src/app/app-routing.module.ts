@@ -9,6 +9,7 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ClienteCreateComponent } from './cliente/cria-cliente/cliente-create.component';
 import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
 import { CriaAtendimentoComponent } from './atendimento/cria-atendimento/cria-atendimento.component';
+import { AtendimentoListaComponent } from './atendimento/lista-atendimento/atendimento-lista.component';
 
 
 
@@ -58,6 +59,12 @@ const routes: Routes = [
   {
     path: 'cliente',
     component: ClienteListaComponent,
+    canActivate: [AuthGuard] 
+  },
+
+  {
+    path: 'atendimento',
+    component: AtendimentoListaComponent,
     canActivate: [AuthGuard] 
   },
 
