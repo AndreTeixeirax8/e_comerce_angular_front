@@ -8,7 +8,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductHomeComponent implements OnInit {
   products: any;
-  //PAREI NA AULA 27  NO MINUTO 2:40
+  
   constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
@@ -21,11 +21,5 @@ export class ProductHomeComponent implements OnInit {
       .subscribe((data: any) => (this.products = data));
   }
 
-  /*
-  loadProducts() {
-    return this.productService.getProducts().subscribe((data: any) => {
-      console.log('data:', data); // Exibe o objeto no formato de string
-      console.dir(data); // Exibe o objeto como uma árvore
-    });
-  }*/
+ 
 }

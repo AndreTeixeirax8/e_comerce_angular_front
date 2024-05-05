@@ -1,3 +1,4 @@
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -77,6 +78,7 @@
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: bold;
   line-height: 1.5;
   text-align: center;
   vertical-align: middle;
@@ -113,7 +115,9 @@
   border-color: #4e555b;
 }
 
-/* Adicione mais estilos para outros tipos de botões conforme necessário */
+ a {
+  text-decoration: none;
+}
 
 @media screen and (min-width: 768px) {
   .land-img {
