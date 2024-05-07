@@ -1,18 +1,4 @@
-input[type=text]{
-    padding: 10px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    border: #c2c2c2 solid 1px;
-    border-radius:5px ;
-    display:block;
-    width: 80%;
-    font-family: inherit;
-    font-size: inherit;
-}
 
-input[type=text]:focus{
-    outline: none;
-}
 
 .btn-container{
     text-align: center;
@@ -29,4 +15,74 @@ input[type=text]:focus{
     font-size: 18px;
     font-weight: 500;
     margin: 1rem auto;
+}
+
+/* Estilos para o botão primário */
+.btn-primary {
+    color: #fff;
+    display:inline-block;
+    outline:0;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin: 1rem auto;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  
+ a {
+    text-decoration: none;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz o formulário ocupar a altura inteira da tela */
+}
+
+.login-form {
+    width: 300px; /* Largura do formulário */
+}
+
+.login-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
 }
