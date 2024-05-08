@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-home',
@@ -9,7 +10,10 @@ import { ProductService } from '../services/product.service';
 export class ProductHomeComponent implements OnInit {
   products: any;
   
-  constructor(public productService: ProductService) {}
+  constructor(
+    public productService: ProductService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadProducts();
@@ -21,5 +25,11 @@ export class ProductHomeComponent implements OnInit {
       .subscribe((data: any) => (this.products = data));
   }
 
+  logout() {
+    // Limpa o token armazenado
+    window.localStorage.removeItem('token');
+    // Redireciona para a tela de login
+    this.router.navigate(['/auth/login']);
+  }
  
 }
