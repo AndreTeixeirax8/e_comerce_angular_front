@@ -28,6 +28,7 @@
   color: #fff;
 }
 
+
 .toggle-btn {
   position: absolute;
   top: 10px;
@@ -43,6 +44,10 @@
   .menu li a i {
     font-size: 24px; /* Tamanho dos ícones para desktop */
   }
+  .toggle-btn span i
+  {
+    font-size: 24px;
+  }
 }
 
 /* Ajuste o tamanho dos ícones para dispositivos móveis */
@@ -50,6 +55,11 @@
   .menu li a i {
     font-size: 18px; /* Tamanho dos ícones para dispositivos móveis */
   }
+  .toggle-btn span i
+  {
+    font-size: 18px;
+  }
+  
 }
 
 .content {
