@@ -38,6 +38,20 @@
   cursor: pointer;
 }
 
+/* Ajuste o tamanho dos ícones para desktop */
+@media (min-width: 768px) {
+  .menu li a i {
+    font-size: 24px; /* Tamanho dos ícones para desktop */
+  }
+}
+
+/* Ajuste o tamanho dos ícones para dispositivos móveis */
+@media (max-width: 767px) {
+  .menu li a i {
+    font-size: 18px; /* Tamanho dos ícones para dispositivos móveis */
+  }
+}
+
 .content {
   margin-left: 250px; /* Ajuste conforme necessário para a largura da barra lateral */
   padding: 20px;
