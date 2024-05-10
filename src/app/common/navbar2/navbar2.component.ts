@@ -9,6 +9,12 @@ export class Navbar2Component implements OnInit {
 
   constructor() { }
 
+  isCollapsed: boolean = false;
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
   ngOnInit(): void {
   }
 
