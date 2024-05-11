@@ -26,6 +26,7 @@
 .menu li a {
   text-decoration: none;
   color: #fff;
+  
 }
 
 
@@ -39,10 +40,22 @@
   cursor: pointer;
 }
 
+.logout-link {
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  color: #fff; /* Define a cor do texto */
+  cursor: pointer; /* Muda o cursor ao passar o mouse sobre o link */
+}
+
+.logout-link i {
+  margin-right: 5px; /* Adiciona um espaço entre o ícone e o texto */
+  /* Adicione estilos adicionais conforme necessário */
+}
+
 /* Ajuste o tamanho dos ícones para desktop */
 @media (min-width: 768px) {
   .menu li a i {
     font-size: 24px; /* Tamanho dos ícones para desktop */
+    margin-right: 5px
   }
   .toggle-btn span i
   {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar2',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Navbar2Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   isCollapsed: boolean = false;
 
@@ -16,6 +19,13 @@ export class Navbar2Component implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  
+  logout() {
+    // Limpa o token armazenado
+    window.localStorage.removeItem('token');
+    // Redireciona para a tela de login
+    this.router.navigate(['/auth/login']);
   }
 
 }
