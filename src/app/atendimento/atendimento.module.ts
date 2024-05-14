@@ -7,6 +7,7 @@ import { ProductModule } from '../product/product.module';
 import { CriaAtendimentoComponent } from './cria-atendimento/cria-atendimento.component';
 import { AtendimentoListaComponent } from './lista-atendimento/atendimento-lista.component';
 import { ClienteModule } from '../cliente';
+import { SharedModule } from '../common/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ClienteModule } from '../cliente';
     ReactiveFormsModule, 
     RouterModule, 
     ProductModule,
-    ClienteModule // uso do  Navbar2Component,
+    ClienteModule, // uso do  Navbar2Component,
+    SharedModule,
   ],
   exports:[]
 })

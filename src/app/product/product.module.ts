@@ -14,6 +14,9 @@ import { ProductAccessoriesComponent } from './product-accessories/product-acces
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ClienteModule } from '../cliente';
+import { AtendimentoModule } from '../atendimento/atendimento.module';
+import { SharedModule } from '../common/shared.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     CommonModule,
     ProductRoutingModule,
     IvyCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    SharedModule
       ],
       exports:[NavbarComponent]
 })

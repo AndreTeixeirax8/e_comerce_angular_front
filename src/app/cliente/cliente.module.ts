@@ -6,13 +6,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductModule } from '../product/product.module';
 import { ClienteListaComponent } from './cliente-lista/cliente-lista.component'; 
-import { Navbar2Component } from '../common/navbar2/navbar2.component';
+import { SharedModule } from '../common/shared.module';
+
 
 @NgModule({
   declarations: [    
    ClienteCreateComponent,
     ClienteListaComponent,
-    Navbar2Component,
+  
    
   ],
   imports: [
@@ -20,10 +21,10 @@ import { Navbar2Component } from '../common/navbar2/navbar2.component';
     ClienteRoutingModule,
     ReactiveFormsModule, 
     RouterModule, 
-    ProductModule
+    ProductModule,SharedModule
   
   ],
-  exports: [Navbar2Component],
+  exports: [],
   
 })
 export class ClienteModule {}
