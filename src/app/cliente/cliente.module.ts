@@ -21,7 +21,8 @@ import { SharedModule } from '../common/shared.module';
     ClienteRoutingModule,
     ReactiveFormsModule, 
     RouterModule, 
-    ProductModule,SharedModule
+    ProductModule,
+    SharedModule
   
   ],
   exports: [],

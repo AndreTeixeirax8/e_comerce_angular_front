@@ -20,4 +20,6 @@ export class AtendimentoListaComponent implements OnInit {
       this.atendimentos = data as any[]; 
     });
   }
+
+  
 }
