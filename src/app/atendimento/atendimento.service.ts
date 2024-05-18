@@ -21,4 +21,9 @@ export class AtendimentoService {
     return this.http.patch(this.apiUrl + '/atendimento/' + id,atendimento)
   }
 
+  buscarClientePorId(id: any) {
+    
+    return this.http.get(`${this.apiUrl}/cliente/${id}`);
+  }
+
 }

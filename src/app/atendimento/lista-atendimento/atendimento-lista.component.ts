@@ -8,6 +8,7 @@ import { AtendimentoService } from '../atendimento.service';
 })
 export class AtendimentoListaComponent implements OnInit {
   atendimentos: any[] = []; // Array para armazenar os clientes
+  clientes: { [key: string]: string } = {}; // Mapa para armazenar os nomes dos clientes
 
   constructor(private atendimentoService: AtendimentoService) { }
 
@@ -18,9 +19,22 @@ export class AtendimentoListaComponent implements OnInit {
   buscarAtendimentos(): void {
     this.atendimentoService.buscaVariosAtendimento().subscribe((data: any) => { 
       this.atendimentos = data as any[]; 
+      this.buscarNomesClientes(); // Chama a função para buscar os nomes dos clientes
     });
   }
 
   //busca um cliente por id
+
+  buscarNomesClientes(): void {
+    // Extrai todos os IDs dos clientes dos atendimentos
+    const idsClientes = this.atendimentos.map(atendimento => atendimento.cliente);
+
+    // Para cada ID de cliente, busca o nome do cliente e armazena no mapa
+    idsClientes.forEach(idCliente => {
+      this.atendimentoService.buscarClientePorId(idCliente).subscribe((cliente: any) => {
+        this.clientes[idCliente] = cliente.nome;
+      });
+    });
+  }
   
 }
