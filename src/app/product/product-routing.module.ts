@@ -6,7 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
-import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
+//import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { AuthGuard } from '../auth/auth.guard';
@@ -49,15 +49,15 @@ const routes: Routes = [
     path: 'accessories/:id',
     component: SubCategoryComponent, //trocar a subcategoria ???
   },
-  {
-    path: 'cosmetics',
-    component: ProductCosmeticsComponent,
-  },
+ // {
+ //   path: 'cosmetics',
+ //   component: ProductCosmeticsComponent,
+ // },
    
-  {   
-    path: 'cosmetics/:id',
-    component: SubCategoryComponent, //trocar a subcategoria ???
-  },
+ // {   
+  //  path: 'cosmetics/:id',
+  //  component: SubCategoryComponent, //trocar a subcategoria ???
+//  },
   
   {
     path: 'detail/:id',

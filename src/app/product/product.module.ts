@@ -9,7 +9,7 @@ import { TitleTransformPipe } from './title.transform.pipe';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
-import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
+//import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,7 +27,7 @@ import { SharedModule } from '../common/shared.module';
     SubCategoryComponent,
     NavbarComponent,
     ProductClothingComponent,
-    ProductCosmeticsComponent,
+    //ProductCosmeticsComponent,
     ProductAccessoriesComponent,
     ProductCreateComponent,
     ProductEditComponent,
