@@ -1,6 +1,14 @@
+li {
+    list-style-type: none;
+  }
+  
+  .list-item-description strong {
+    font-weight: bold;
+    color: #333;
+  }
 .list-container {
     margin: 20px auto;
-    width: 80%;
+    width: 70%;
 }
 
 .list-item {

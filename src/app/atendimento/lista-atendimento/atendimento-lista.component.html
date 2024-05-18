@@ -4,10 +4,10 @@
     <ul>
         <li *ngFor="let atendimento of atendimentos" class="list-item">
             <p class="list-item-title">Nome do Cliente: {{ clientes[atendimento.cliente] }}</p>
-            <p class="list-item-description">Observações: {{ atendimento.observacoes }}</p>
-            <p class="list-item-description">Serviço: {{ atendimento.tipo_servico }}</p>
-            <p class="list-item-description">Atendimento Via :{{ atendimento. atendimento_via }}</p>
-            <p class="list-item-description">Data: {{ atendimento.dataCriacao }}</p>
+            <p class="list-item-description"><strong>Observações:</strong> {{ atendimento.observacoes }}</p>
+            <p class="list-item-description"><strong>Serviço: </strong>{{ atendimento.tipo_servico }}</p>
+            <p class="list-item-description"><strong>Atendimento Via </strong>:{{ atendimento. atendimento_via }}</p>
+            <p class="list-item-description"><strong>Data: </strong>{{ atendimento.dataCriacao | date:'dd/MM/yyyy' }}</p>
            
             
         </li>
