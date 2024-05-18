@@ -21,5 +21,6 @@ export class AtendimentoListaComponent implements OnInit {
     });
   }
 
+  //busca um cliente por id
   
 }
