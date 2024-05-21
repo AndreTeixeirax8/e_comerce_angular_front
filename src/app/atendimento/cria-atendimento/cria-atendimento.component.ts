@@ -9,39 +9,41 @@ import { ClienteService } from 'src/app/cliente/cliente.service';
   styleUrls: ['./cria-atendimento.component.css']
 })
 export class CriaAtendimentoComponent implements OnInit {
-  clientes: any[] = []; // Lista de clientes
-  atendimentoForm =this.formBuilder.group({
-   
-    cliente:[''], 
-    observacoes:[''],
+  clientes: any[] = [];
+  origensAtendimento: any[] = [];
+
+  atendimentoForm = this.formBuilder.group({
+    cliente: [''],
+    observacoes: [''],
     tipo_servico: [''],
-    atendimento_via:['']
-    
-  })
-
-
-  onSubmit(){
-    // console.log('VALUE', this.productForm.value)
-     this.atendimentoService.criaAtendimento(this.atendimentoForm.value)
-     this.atendimentoForm.reset()
-   }
+    atendimento_via: ['']
+  });
 
   constructor(
-    private formBuilder:FormBuilder,
+    private formBuilder: FormBuilder,
     private atendimentoService: AtendimentoService,
-    private clienteService: ClienteService // Injeção do serviço de cliente
-  ) { }
+    private clienteService: ClienteService
+  ) {}
 
   ngOnInit(): void {
-     // Obtenha a lista de clientes ao inicializar o componente
-     this.obterClientes();
+    this.obterClientes();
+    this.obterOrigensAtendimento();
   }
 
-   // Método para obter a lista de clientes
-   obterClientes() {
+  obterClientes() {
     this.clienteService.buscaVariosCliente().subscribe((clientes: any[]) => {
       this.clientes = clientes;
     });
   }
 
+  obterOrigensAtendimento() {
+    this.atendimentoService.buscaVariosOrigemAtendimento().subscribe((origens: any[]) => {
+      this.origensAtendimento = origens;
+    });
+  }
+
+  onSubmit() {
+    this.atendimentoService.criaAtendimento(this.atendimentoForm.value);
+    this.atendimentoForm.reset();
+  }
 }

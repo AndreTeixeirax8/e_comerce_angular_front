@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +30,10 @@ export class AtendimentoService {
   buscarOrigemAtendimentoPorId(id: any) {
     
     return this.http.get(`${this.apiUrl}/origem-atendimento/${id}`);
+  }
+  
+  buscaVariosOrigemAtendimento(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl + '/origem-atendimento');
   }
 
 }

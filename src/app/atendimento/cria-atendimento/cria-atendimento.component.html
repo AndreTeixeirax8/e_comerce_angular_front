@@ -1,14 +1,18 @@
-<app-navbar></app-navbar>
+<app-navbar2></app-navbar2>
 
 <form [formGroup]="atendimentoForm" (ngSubmit)="onSubmit()">
 
     <select class="atendimento-input" formControlName="cliente">
-        <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+        <option *ngFor="let cliente of clientes" [value]="cliente.id" >{{ cliente.nome }}</option>
       </select>
  
     <input class="atendimento-input" placeholder="Observacoes" type="text" formControlName="observacoes">
     <input class="atendimento-input" placeholder="Tipo_servico" type="text" formControlName="tipo_servico">
-    <input class="atendimento-input" placeholder="Atendimento_via" type="text" formControlName="atendimento_via">
+  
+    <select class="atendimento-input" formControlName="atendimento_via">
+        <option value="" disabled selected>Selecione o tipo de atendimento</option>
+        <option *ngFor="let origem of origensAtendimento" [value]="origem.id">{{ origem.nome_antendimento }}</option>
+    </select>
   
   
    
