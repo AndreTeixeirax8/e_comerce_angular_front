@@ -6,7 +6,7 @@
             <p class="list-item-title">Nome do Cliente: {{ clientes[atendimento.cliente] }}</p>
             <p class="list-item-description"><strong>Observações:</strong> {{ atendimento.observacoes }}</p>
             <p class="list-item-description"><strong>Serviço: </strong>{{ atendimento.tipo_servico }}</p>
-            <p class="list-item-description"><strong>Atendimento Via </strong>:{{ atendimento. atendimento_via }}</p>
+            <p class="list-item-description"><strong>Atendimento Via </strong>:{{ origem_atendimentos[atendimento.atendimento_via] }}</p>
             <p class="list-item-description"><strong>Data: </strong>{{ atendimento.dataCriacao | date:'dd/MM/yyyy' }}</p>
            
             

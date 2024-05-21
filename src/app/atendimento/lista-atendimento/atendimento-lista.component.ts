@@ -7,34 +7,39 @@ import { AtendimentoService } from '../atendimento.service';
   styleUrls: ['./atendimento-lista.component.css']
 })
 export class AtendimentoListaComponent implements OnInit {
-  atendimentos: any[] = []; // Array para armazenar os clientes
-  clientes: { [key: string]: string } = {}; // Mapa para armazenar os nomes dos clientes
+  atendimentos: any[] = [];
+  clientes: { [key: string]: string } = {};
+  origem_atendimentos: { [key: string]: { nome_antendimento: string } } = {};
 
   constructor(private atendimentoService: AtendimentoService) { }
 
   ngOnInit(): void {
-    this.buscarAtendimentos(); // Chama a função para buscar os clientes ao inicializar o componente
+    this.buscarAtendimentos(); //primeira fução que inicia 
   }
 
   buscarAtendimentos(): void {
-    this.atendimentoService.buscaVariosAtendimento().subscribe((data: any) => { 
-      this.atendimentos = data as any[]; 
-      this.buscarNomesClientes(); // Chama a função para buscar os nomes dos clientes
+    this.atendimentoService.buscaVariosAtendimento().subscribe((data: any) => {
+      this.atendimentos = data as any[];
+      this.buscarNomesClientes();
+      this.buscarOrigemAtendimentoPorId() 
     });
   }
 
-  //busca um cliente por id
-
   buscarNomesClientes(): void {
-    // Extrai todos os IDs dos clientes dos atendimentos
     const idsClientes = this.atendimentos.map(atendimento => atendimento.cliente);
-
-    // Para cada ID de cliente, busca o nome do cliente e armazena no mapa
     idsClientes.forEach(idCliente => {
       this.atendimentoService.buscarClientePorId(idCliente).subscribe((cliente: any) => {
         this.clientes[idCliente] = cliente.nome;
       });
     });
   }
-  
+
+  buscarOrigemAtendimentoPorId(): void {
+    const idsOrigemAtendimentos = this.atendimentos.map(atendimento => atendimento.atendimento_via);
+    idsOrigemAtendimentos.forEach(idOrigemAtendimento => {
+      this.atendimentoService.buscarOrigemAtendimentoPorId(idOrigemAtendimento).subscribe((origem_atendimentos: any) => {
+        this.origem_atendimentos[idOrigemAtendimento] = origem_atendimentos.nome_antendimento;
+      });
+    });
+  }
 }

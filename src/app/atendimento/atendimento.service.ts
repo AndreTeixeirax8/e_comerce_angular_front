@@ -26,4 +26,9 @@ export class AtendimentoService {
     return this.http.get(`${this.apiUrl}/cliente/${id}`);
   }
 
+  buscarOrigemAtendimentoPorId(id: any) {
+    
+    return this.http.get(`${this.apiUrl}/origem-atendimento/${id}`);
+  }
+
 }
