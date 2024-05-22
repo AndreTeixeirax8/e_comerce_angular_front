@@ -2,9 +2,10 @@
 
 <form [formGroup]="atendimentoForm" (ngSubmit)="onSubmit()">
 
+    <input class="atendimento-input" placeholder="Digite o nome do cliente" type="text" (input)="onClienteInput($event)">
     <select class="atendimento-input" formControlName="cliente">
-        <option *ngFor="let cliente of clientes" [value]="cliente.id" >{{ cliente.nome }}</option>
-      </select>
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+    </select>
  
     <input class="atendimento-input" placeholder="Observacoes" type="text" formControlName="observacoes">
     <input class="atendimento-input" placeholder="Tipo_servico" type="text" formControlName="tipo_servico">
@@ -14,8 +15,6 @@
         <option *ngFor="let origem of origensAtendimento" [value]="origem.id">{{ origem.nome_antendimento }}</option>
     </select>
   
-  
-   
     <div class="btn-container">
         <button class="submit-btn">
             Submit
@@ -25,13 +24,11 @@
         <button class="submit-btn">
             Home
         </button>
-       
     </div>
     <div class="btn-container" [routerLink]="['/atendimento']">
         <button class="submit-btn">
             Listar Atendimento
         </button>
-       
     </div>
 
 </form>

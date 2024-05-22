@@ -14,8 +14,8 @@ export class AtendimentoService {
     return this.http.get(this.apiUrl + '/atendimento');
   }
 
-  criaAtendimento(atendimento:any){
-    return this.http.post(this.apiUrl + '/atendimento/',atendimento).subscribe()
+  criaAtendimento(atendimento: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl + '/atendimento', atendimento);
   }
 
   editaAtendimento(id:any,atendimento:any){
@@ -34,6 +34,12 @@ export class AtendimentoService {
   
   buscaVariosOrigemAtendimento(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl + '/origem-atendimento');
+  }
+
+  buscaClientesPorNome(nome: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/cliente/buscar/nome`, {
+      params: { nome }
+    });
   }
 
 }

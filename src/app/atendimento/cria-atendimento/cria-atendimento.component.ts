@@ -26,14 +26,19 @@ export class CriaAtendimentoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.obterClientes();
     this.obterOrigensAtendimento();
   }
 
-  obterClientes() {
-    this.clienteService.buscaVariosCliente().subscribe((clientes: any[]) => {
-      this.clientes = clientes;
-    });
+  onClienteInput(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    const nome = inputElement.value;
+    if (nome.length >= 2) { // Só busca se tiver pelo menos 2 caracteres
+      this.atendimentoService.buscaClientesPorNome(nome).subscribe((clientes: any[]) => {
+        this.clientes = clientes;
+      });
+    } else {
+      this.clientes = [];
+    }
   }
 
   obterOrigensAtendimento() {
@@ -43,7 +48,8 @@ export class CriaAtendimentoComponent implements OnInit {
   }
 
   onSubmit() {
-    this.atendimentoService.criaAtendimento(this.atendimentoForm.value);
-    this.atendimentoForm.reset();
+    this.atendimentoService.criaAtendimento(this.atendimentoForm.value).subscribe(() => {
+      this.atendimentoForm.reset();
+    });
   }
 }
