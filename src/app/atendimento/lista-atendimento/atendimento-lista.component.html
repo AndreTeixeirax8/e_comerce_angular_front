@@ -1,7 +1,12 @@
 <app-navbar2></app-navbar2>
 <div class="list-container">
   <h2>Lista de Atendimentos</h2>
-  <button class="view-btn" routerLink="/createAtendimento">Novo</button>
+  <button class="view-btn" routerLink="/createAtendimento">
+    <i class="fa-solid fa-pen"></i> Novo
+  </button>
+  <button class="view-btn" routerLink="#">
+    <i class="fa-solid fa-magnifying-glass"></i> Busca
+  </button>
   <ul>
     <li *ngFor="let atendimento of atendimentos" class="list-item">
       <p class="list-item-title">
