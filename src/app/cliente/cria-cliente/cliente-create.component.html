@@ -1,27 +1,35 @@
-<app-navbar></app-navbar>
+<app-navbar2></app-navbar2>
 
-<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+<div class="form-container">
+  <h2>Cadastro de Clientes</h2>
+  <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+    <input
+      class="cliente-input"
+      placeholder="Nome"
+      type="text"
+      formControlName="nome"
+    />
+    <input
+      class="cliente-input"
+      placeholder="Cpf"
+      type="text"
+      formControlName="cpf"
+    />
+    <input
+      class="cliente-input"
+      placeholder="Email"
+      type="text"
+      formControlName="email"
+    />
 
-    <input class="cliente-input" placeholder="Nome" type="text" formControlName="nome">
-    <input class="cliente-input" placeholder="Cpf" type="text" formControlName="cpf">
-    <input class="cliente-input" placeholder="email" type="text" formControlName="email">
-  
-  
-   
     <div class="btn-container">
-        <button class="submit-btn">
-            Submit
-        </button>
+      <button class="submit-btn" type="submit">Submit</button>
     </div>
     <div class="btn-container" [routerLink]="['/']">
-        <button class="submit-btn">
-            Home
-        </button>
-       
+      <button class="submit-btn" type="button">Home</button>
     </div>
-   
     <div class="btn-container">
-        <a href="/cliente" class="btn btn-primary">Listar Clientes</a>
+      <a href="/cliente" class="btn btn-primary">Listar Clientes</a>
     </div>
-
-</form>
+  </form>
+</div>
