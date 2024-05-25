@@ -41,23 +41,28 @@ input[type='text']:focus {
   outline: 0;
   border: 0;
   cursor: pointer;
-  background: #191919;
+  background: #006994; /* Cor fria que combina com o formulário */
   color: #fff;
   border-radius: 20px;
   padding: 14px 110px;
   font-size: 18px;
   font-weight: 500;
   margin: 1rem auto;
+  transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.submit-btn:hover {
+  background: #004d73; /* Tom mais escuro para hover */
 }
 
 .btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
+  border-radius: 20px; /* Bordas arredondadas maiores para combinar com submit-btn */
+  padding: 14px 110px; /* Tamanho ajustado para ser consistente */
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.5;
   text-align: center;
   vertical-align: middle;
@@ -68,13 +73,8 @@ input[type='text']:focus {
 }
 
 .btn-primary:hover {
-  color: #fff;
   background-color: #0056b3;
   border-color: #0056b3;
-}
-
-a {
-  text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -93,5 +93,6 @@ a {
     width: 100%;
     margin: 5px 0;
     font-size: 14px;
+    padding: 10px; /* Ajustado para ser mais compacto em dispositivos móveis */
   }
 }
