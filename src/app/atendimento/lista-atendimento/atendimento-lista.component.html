@@ -1,16 +1,33 @@
 <app-navbar2></app-navbar2>
 <div class="list-container">
-    <h2>Lista de Atendimentos</h2>
-    <button class="view-btn" routerLink="/createAtendimento" >Novo</button>
-    <ul>
-        <li *ngFor="let atendimento of atendimentos" class="list-item">
-            <p class="list-item-title">Nome do Cliente: {{ clientes[atendimento.cliente] }}</p>
-            <p class="list-item-description"><strong>Observações:</strong> {{ atendimento.observacoes }}</p>
-            <p class="list-item-description"><strong>Serviço: </strong>{{ atendimento.tipo_servico }}</p>
-            <p class="list-item-description"><strong>Atendimento Via </strong>:{{ origem_atendimentos[atendimento.atendimento_via] }}</p>
-            <p class="list-item-description"><strong>Data: </strong>{{ atendimento.dataCriacao | date:'dd/MM/yyyy' }}</p>
-           
-            <button class="view-btn" >Ver Detalhes</button>
-        </li>
-    </ul>
+  <h2>Lista de Atendimentos</h2>
+  <button class="view-btn" routerLink="/createAtendimento">Novo</button>
+  <ul>
+    <li *ngFor="let atendimento of atendimentos" class="list-item">
+      <p class="list-item-title">
+        Nome do Cliente: {{ clientes[atendimento.cliente] }}
+      </p>
+      <p class="list-item-description">
+        <strong>Observações:</strong> {{ atendimento.observacoes }}
+      </p>
+
+      <p class="list-item-description">
+        <strong>Serviço </strong>:{{
+          tipo_servico_atendimentos[atendimento.tipo_servico]
+        }}
+      </p>
+
+      <p class="list-item-description">
+        <strong>Atendimento Via </strong>:{{
+          origem_atendimentos[atendimento.atendimento_via]
+        }}
+      </p>
+      <p class="list-item-description">
+        <strong>Data: </strong
+        >{{ atendimento.dataCriacao | date : 'dd/MM/yyyy' }}
+      </p>
+
+      <button class="view-btn">Ver Detalhes</button>
+    </li>
+  </ul>
 </div>

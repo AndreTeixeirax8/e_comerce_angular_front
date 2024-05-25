@@ -39,4 +39,12 @@ export class AtendimentoService {
       params: { nome },
     });
   }
+
+  buscarTipoServicoPorId(id: any) {
+    return this.http.get(`${this.apiUrl}/tipo-servico/${id}`);
+  }
+
+  buscaVariosTipoServico(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl + '/tipo-servico');
+  }
 }
