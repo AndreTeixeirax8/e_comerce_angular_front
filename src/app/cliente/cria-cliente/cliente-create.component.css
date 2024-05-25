@@ -55,28 +55,6 @@ input[type='text']:focus {
   background: #004d73; /* Tom mais escuro para hover */
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  border-radius: 20px; /* Bordas arredondadas maiores para combinar com submit-btn */
-  padding: 14px 110px; /* Tamanho ajustado para ser consistente */
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
 @media (max-width: 600px) {
   .form-container {
     padding: 10px;
