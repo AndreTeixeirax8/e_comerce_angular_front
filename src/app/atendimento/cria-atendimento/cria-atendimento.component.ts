@@ -13,6 +13,7 @@ export class CriaAtendimentoComponent implements OnInit {
   origensAtendimento: any[] = [];
 
   atendimentoForm = this.formBuilder.group({
+    clienteNome: [''],
     cliente: [''],
     observacoes: [''],
     tipo_servico: [''],
@@ -33,7 +34,6 @@ export class CriaAtendimentoComponent implements OnInit {
     const inputElement = event.target as HTMLInputElement;
     const nome = inputElement.value;
     if (nome.length >= 2) {
-      // Só busca se tiver pelo menos 2 caracteres
       this.atendimentoService
         .buscaClientesPorNome(nome)
         .subscribe((clientes: any[]) => {
@@ -53,10 +53,17 @@ export class CriaAtendimentoComponent implements OnInit {
   }
 
   onSubmit() {
-    this.atendimentoService
-      .criaAtendimento(this.atendimentoForm.value)
-      .subscribe(() => {
-        this.atendimentoForm.reset();
-      });
+    const clienteNome = this.atendimentoForm.get('clienteNome')?.value;
+    const cliente = this.clientes.find((c) => c.nome === clienteNome);
+    if (cliente) {
+      this.atendimentoForm.patchValue({ cliente: cliente.id });
+      this.atendimentoService
+        .criaAtendimento(this.atendimentoForm.value)
+        .subscribe(() => {
+          this.atendimentoForm.reset();
+        });
+    } else {
+      alert('Cliente não encontrado!');
+    }
   }
 }

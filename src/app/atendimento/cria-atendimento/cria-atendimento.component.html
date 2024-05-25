@@ -5,23 +5,25 @@
     class="atendimento-input"
     placeholder="Digite o nome do cliente"
     type="text"
+    list="clientesList"
     (input)="onClienteInput($event)"
+    formControlName="clienteNome"
   />
-  <select class="atendimento-input" formControlName="cliente">
-    <option *ngFor="let cliente of clientes" [value]="cliente.id">
+  <datalist id="clientesList">
+    <option *ngFor="let cliente of clientes" [value]="cliente.nome">
       {{ cliente.nome }}
     </option>
-  </select>
+  </datalist>
 
   <input
     class="atendimento-input"
-    placeholder="Observacoes"
+    placeholder="Observações"
     type="text"
     formControlName="observacoes"
   />
   <input
     class="atendimento-input"
-    placeholder="Tipo_servico"
+    placeholder="Tipo de serviço"
     type="text"
     formControlName="tipo_servico"
   />
