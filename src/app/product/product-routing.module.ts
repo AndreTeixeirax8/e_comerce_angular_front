@@ -5,21 +5,19 @@ import { ProductBagsComponent } from './product-bags/product-bags.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductClothingComponent } from './product-clothing/product-clothing.component';
-import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
-//import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
-    path:'create',
-    component:ProductCreateComponent,
-    canActivate:[AuthGuard]
+    path: 'create',
+    component: ProductCreateComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path:'edit/:id',
-    component:ProductEditComponent
+    path: 'edit/:id',
+    component: ProductEditComponent,
   },
   {
     path: 'bags/:id',
@@ -37,28 +35,16 @@ const routes: Routes = [
     path: 'clothing',
     component: ProductClothingComponent,
   },
-  {   
+  {
     path: 'clothing/:id',
     component: SubCategoryComponent, //trocar a subcategoria ???
   },
+
   {
-    path: 'accessories',
-    component: ProductAccessoriesComponent,
-  },
-  {   
     path: 'accessories/:id',
     component: SubCategoryComponent, //trocar a subcategoria ???
   },
- // {
- //   path: 'cosmetics',
- //   component: ProductCosmeticsComponent,
- // },
-   
- // {   
-  //  path: 'cosmetics/:id',
-  //  component: SubCategoryComponent, //trocar a subcategoria ???
-//  },
-  
+
   {
     path: 'detail/:id',
     component: ProductDetailComponent,
