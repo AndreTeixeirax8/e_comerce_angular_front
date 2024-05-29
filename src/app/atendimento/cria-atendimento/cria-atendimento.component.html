@@ -21,12 +21,13 @@
     type="text"
     formControlName="observacoes"
   />
-  <input
-    class="atendimento-input"
-    placeholder="Tipo de serviço"
-    type="text"
-    formControlName="tipo_servico"
-  />
+
+  <select class="atendimento-input" formControlName="tipo_servico">
+    <option value="" disabled selected>Selecione o tipo de Serviço</option>
+    <option *ngFor="let tipoServico of tipoServico" [value]="tipoServico.id">
+      {{ tipoServico.nome_servico }}
+    </option>
+  </select>
 
   <select class="atendimento-input" formControlName="atendimento_via">
     <option value="" disabled selected>Selecione o tipo de atendimento</option>

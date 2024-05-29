@@ -11,6 +11,7 @@ import { ClienteService } from 'src/app/cliente/cliente.service';
 export class CriaAtendimentoComponent implements OnInit {
   clientes: any[] = [];
   origensAtendimento: any[] = [];
+  tipoServico: any[] = [];
 
   atendimentoForm = this.formBuilder.group({
     clienteNome: [''],
@@ -28,6 +29,7 @@ export class CriaAtendimentoComponent implements OnInit {
 
   ngOnInit(): void {
     this.obterOrigensAtendimento();
+    this.obterTipoServico();
   }
 
   onClienteInput(event: Event) {
@@ -45,6 +47,14 @@ export class CriaAtendimentoComponent implements OnInit {
   }
 
   obterOrigensAtendimento() {
+    this.atendimentoService
+      .buscaVariosTipoServico()
+      .subscribe((tipoServico: any[]) => {
+        this.tipoServico = tipoServico;
+      });
+  }
+
+  obterTipoServico() {
     this.atendimentoService
       .buscaVariosOrigemAtendimento()
       .subscribe((origens: any[]) => {
