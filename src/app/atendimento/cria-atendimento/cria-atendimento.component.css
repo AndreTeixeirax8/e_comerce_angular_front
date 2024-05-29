@@ -1,82 +1,95 @@
-input[type=text]{
-    padding: 10px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    border: 0;
-    border-bottom: 1px solid #eee ;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius:10px;
-    display: block;
-    width: 80%;
-    font-family:inherit ;
-    font-size: inherit;
- 
- 
- }
- 
- input[type=text]:focus{
-    outline: none; 
- }
- 
- .btn-container{
-     text-align: center;
- }
- 
- .submit-btn{
-     display: inline-block;
-     outline: 0;
-     border: 0;
-     cursor: pointer;
-     background: #191919;
-     color: #fff;
-     border-radius: 20px;
-     padding: 14px 110px 14px;
-     font-size: 18px;
-     font-weight: 500;
-     margin: 1rem auto;
-     
- }
- 
- 
- select.product-input {
-     padding: 10px;
-     margin: 20px auto;
-     box-sizing: border-box;
-     border: 0;
-     border-bottom: 1px solid #eee;
-     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-     border-radius: 10px;
-     display: block;
-     width: 80%;
-     font-family: inherit;
-     font-size: inherit;
-     outline: none;
- }
- 
- select.product-input:focus {
-     outline: none;
- }
-
- /* estilo do select*/
- input[type=text],
-select.atendimento-input {
-    padding: 10px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    border: 0;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 10px;
-    display: block;
-    width: 80%;
-    font-family: inherit;
-    font-size: inherit;
-    outline: none;
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #dceaee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input[type=text]:focus,
-select.atendimento-input:focus {
-    outline: none;
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+input[type='text'],
+select.atendimento-input,
+textarea.atendimento-input {
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  display: block;
+  width: calc(33.33% - 10px); /* Ajuste para caber três colunas */
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea.atendimento-input.observacoes {
+  width: 100%;
+  height: 100px; /* Ajuste a altura conforme necessário */
+}
+
+input[type='text']:focus,
+select.atendimento-input:focus,
+textarea.atendimento-input:focus {
+  outline: none;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.submit-btn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: #006994; /* Cor fria que combina com o formulário */
+  color: #fff;
+  border-radius: 20px;
+  padding: 14px 110px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 1rem auto;
+  transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.submit-btn:hover {
+  background: #004d73; /* Tom mais escuro para hover */
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  input[type='text'],
+  select.atendimento-input,
+  textarea.atendimento-input {
+    width: 80%;
+    margin-left: 80px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+    padding: 10px; /* Ajustado para ser mais compacto em dispositivos móveis */
+  }
+}
