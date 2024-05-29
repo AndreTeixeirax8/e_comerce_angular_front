@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LogInComponent } from './auth/log-in/log-in.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ProductBagsComponent } from './product/product-bags/product-bags.component';
-import { ProductClothingComponent } from './product/product-clothing/product-clothing.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ClienteCreateComponent } from './cliente/cria-cliente/cliente-create.component';
 import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
@@ -31,11 +30,7 @@ const routes: Routes = [
     component: ProductBagsComponent,
     canActivate: [AuthGuard], // Adicionando o AuthGuard para proteger a rota
   },
-  {
-    path: 'clothing',
-    component: ProductClothingComponent,
-    canActivate: [AuthGuard],
-  },
+
   {
     path: 'create',
     component: ProductCreateComponent,
