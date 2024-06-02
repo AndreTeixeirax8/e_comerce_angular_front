@@ -5,6 +5,19 @@ li {
   margin: 20px auto;
   width: 70%;
 }
+h2 {
+  padding: 20px 50px;
+  background-color: #006994; /* Cor fria similar ao cadastro de clientes */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  max-width: 500px;
+  text-align: center; /* Centraliza o texto dentro do h2 */
+  margin-left: 30%;
+}
 
 .list-item {
   padding: 15px;
