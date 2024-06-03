@@ -37,26 +37,31 @@
   </ul>
 
   <div class="pagination">
-    <button (click)="irParaPrimeiraPagina()">Primeira</button>
+    <button class="view-btn" (click)="irParaPrimeiraPagina()">Primeira</button>
     <button
+      class="view-btn"
       (click)="irParaPaginaAnterior()"
       [disabled]="atendimentos.meta.currentPage === 1"
     >
+      <i class="fa-solid fa-backward"></i>
       Anterior
     </button>
-    <span
-      >Página {{ atendimentos.meta.currentPage }} de
-      {{ atendimentos.meta.totalPages }}</span
-    >
+    <span>
+      Página {{ atendimentos.meta.currentPage }} de
+      {{ atendimentos.meta.totalPages }}
+    </span>
     <button
+      class="view-btn"
       (click)="irParaProximaPagina()"
       [disabled]="
         atendimentos.meta.currentPage === atendimentos.meta.totalPages
       "
     >
       Próxima
+      <i class="fa-solid fa-forward"></i>
     </button>
     <button
+      class="view-btn"
       (click)="irParaUltimaPagina()"
       [disabled]="
         atendimentos.meta.currentPage === atendimentos.meta.totalPages
