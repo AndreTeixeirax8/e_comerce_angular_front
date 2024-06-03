@@ -14,6 +14,15 @@ export class AtendimentoService {
     return this.http.get(this.apiUrl + '/atendimento');
   }
 
+  buscaPaginadaAtendimento(paginaAtual: number, itensPorPagina: number) {
+    const params = {
+      page: paginaAtual,
+      limit: itensPorPagina,
+      sortBy: 'dataCriacao:ASC',
+    };
+    return this.http.get(this.apiUrl + '/atendimento/paginada', { params });
+  }
+
   criaAtendimento(atendimento: any): Observable<any> {
     return this.http.post<any>(this.apiUrl + '/atendimento', atendimento);
   }

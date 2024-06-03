@@ -8,9 +8,9 @@
     <i class="fa-solid fa-magnifying-glass"></i> Busca
   </button>
   <ul>
-    <li *ngFor="let atendimento of atendimentos" class="list-item">
+    <li *ngFor="let atendimento of atendimentos.data" class="list-item">
       <p class="list-item-title">
-        Nome do Cliente: {{ clientes[atendimento.cliente] }}
+        Nome do Cliente: {{ atendimento.cliente_entity.nome }}
       </p>
       <p class="list-item-description">
         <strong>Observações:</strong> {{ atendimento.observacoes }}
@@ -18,13 +18,13 @@
 
       <p class="list-item-description">
         <strong>Serviço </strong>:{{
-          tipo_servico_atendimentos[atendimento.tipo_servico]
+          atendimento.tipo_servico_entity.nome_servico
         }}
       </p>
 
       <p class="list-item-description">
         <strong>Atendimento Via </strong>:{{
-          origem_atendimentos[atendimento.atendimento_via]
+          atendimento.origem_atendimento.nome_antendimento
         }}
       </p>
       <p class="list-item-description">
@@ -35,4 +35,34 @@
       <button class="view-btn">Ver Detalhes</button>
     </li>
   </ul>
+
+  <div class="pagination">
+    <button (click)="irParaPrimeiraPagina()">Primeira</button>
+    <button
+      (click)="irParaPaginaAnterior()"
+      [disabled]="atendimentos.meta.currentPage === 1"
+    >
+      Anterior
+    </button>
+    <span
+      >Página {{ atendimentos.meta.currentPage }} de
+      {{ atendimentos.meta.totalPages }}</span
+    >
+    <button
+      (click)="irParaProximaPagina()"
+      [disabled]="
+        atendimentos.meta.currentPage === atendimentos.meta.totalPages
+      "
+    >
+      Próxima
+    </button>
+    <button
+      (click)="irParaUltimaPagina()"
+      [disabled]="
+        atendimentos.meta.currentPage === atendimentos.meta.totalPages
+      "
+    >
+      Última
+    </button>
+  </div>
 </div>
