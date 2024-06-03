@@ -36,8 +36,16 @@
         <strong>Status </strong>:{{ atendimento.status }}
       </p>
 
-      <button class="view-btn" (click)="editarAtendimento(atendimento)">
-        Fechar Atendimento
+      <button
+        class="view-btn-sucesso"
+        (click)="editarAtendimento(atendimento)"
+        (mouseenter)="isHovering = true"
+        (mouseleave)="isHovering = false"
+      >
+        <i class="fa-solid fa-check"></i>
+        <span class="btn-text" [ngClass]="{ show: isHovering }"
+          >Solucionar</span
+        >
       </button>
     </li>
   </ul>

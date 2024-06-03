@@ -7,6 +7,7 @@ import { AtendimentoService } from '../atendimento.service';
   styleUrls: ['./atendimento-lista.component.css'],
 })
 export class AtendimentoListaComponent implements OnInit {
+  isHovering = false;
   paginaAtual = 1;
   itensPorPagina = 5;
   atendimentos: {
@@ -80,7 +81,7 @@ export class AtendimentoListaComponent implements OnInit {
   editarAtendimento(atendimento: any) {
     const atendimentoEditado = {
       ...atendimento,
-      status: 'fechado',
+      status: 'solucionado',
     };
 
     this.atendimentoService

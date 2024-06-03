@@ -55,6 +55,47 @@ h2 {
   transition: background-color 0.3s;
 }
 
+.view-btn-sucesso {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00944a;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  width: 10%;
+  margin-top: 10px;
+}
+
+.view-btn-sucesso {
+  padding: 5px; /* Adiciona um espaçamento interno mínimo */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+  transform: scale(1); /* Define a escala inicial do botão */
+  /* border-radius: 50%; /* Torna o botão uma bolinha */
+  overflow: hidden; /* Oculta o texto que ultrapassar o botão */
+}
+
+.view-btn-sucesso .btn-text {
+  opacity: 0; /* Oculta o texto inicialmente */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+  margin-left: 5px; /* Adiciona um espaçamento entre o ícone e o texto */
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+}
+
+.view-btn-sucesso:hover {
+  transform: scale(1.2); /* Aumenta a escala do botão ao passar o mouse */
+  padding: 5px 10px; /* Aumenta o espaçamento interno para acomodar o texto */
+  border-radius: 5px; /* Torna o botão retangular */
+}
+
+.view-btn-sucesso:hover .btn-text {
+  opacity: 1; /* Exibe o texto ao passar o mouse sobre o botão */
+}
+
 .view-btn:hover {
   background-color: #004d73; /* Tom mais escuro para hover */
 }
