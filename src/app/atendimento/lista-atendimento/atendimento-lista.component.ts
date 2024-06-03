@@ -76,4 +76,23 @@ export class AtendimentoListaComponent implements OnInit {
     this.paginaAtual = this.atendimentos.meta.totalPages;
     this.buscarAtendimentos();
   }
+
+  editarAtendimento(atendimento: any) {
+    const atendimentoEditado = {
+      ...atendimento,
+      status: 'fechado',
+    };
+
+    this.atendimentoService
+      .editaAtendimento(atendimento.id, atendimentoEditado)
+      .subscribe(
+        (response) => {
+          console.log('Atendimento editado com sucesso:', response);
+          // Você pode atualizar a lista de atendimentos aqui, se necessário
+        },
+        (error) => {
+          console.error('Erro ao editar o atendimento:', error);
+        },
+      );
+  }
 }

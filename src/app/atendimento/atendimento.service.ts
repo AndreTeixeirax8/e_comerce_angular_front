@@ -27,9 +27,10 @@ export class AtendimentoService {
     return this.http.post<any>(this.apiUrl + '/atendimento', atendimento);
   }
 
+  /*
   editaAtendimento(id: any, atendimento: any) {
     return this.http.patch(this.apiUrl + '/atendimento/' + id, atendimento);
-  }
+  }*/
 
   buscarClientePorId(id: any) {
     return this.http.get(`${this.apiUrl}/cliente/${id}`);
@@ -55,5 +56,10 @@ export class AtendimentoService {
 
   buscaVariosTipoServico(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl + '/tipo-servico');
+  }
+
+  editaAtendimento(id: string, atendimento: any) {
+    const url = `${this.apiUrl}/atendimento/${id}`;
+    return this.http.put(url, atendimento);
   }
 }

@@ -36,7 +36,9 @@
         <strong>Status </strong>:{{ atendimento.status }}
       </p>
 
-      <button class="view-btn">Ver Detalhes</button>
+      <button class="view-btn" (click)="editarAtendimento(atendimento)">
+        Fechar Atendimento
+      </button>
     </li>
   </ul>
 
