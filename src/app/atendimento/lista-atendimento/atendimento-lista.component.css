@@ -54,11 +54,12 @@ h2 {
   text-transform: uppercase;
   transition: background-color 0.3s;
 }
-
-.view-btn-sucesso {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00944a;
+/*Configuração dos botoes dos cards*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   color: #fff;
   border: none;
   border-radius: 7px;
@@ -66,35 +67,42 @@ h2 {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: background-color 0.3s;
-  width: 100px;
+  transition: all 0.3s ease;
+  width: 100px; /* Define uma largura fixa */
+  height: 25px; /* Define uma altura fixa */
   margin-top: 10px;
+  margin-right: 12px;
+  overflow: hidden; /* Oculta o conteúdo que ultrapassar o botão */
 }
 
-.view-btn-sucesso {
-  padding: 5px; /* Adiciona um espaçamento interno mínimo */
-  transition: all 0.3s ease; /* Adiciona uma transição suave */
-  transform: scale(1); /* Define a escala inicial do botão */
-  /* border-radius: 50%; /* Torna o botão uma bolinha */
-  overflow: hidden; /* Oculta o texto que ultrapassar o botão */
-}
-
-.view-btn-sucesso .btn-text {
+.btn .btn-text {
   opacity: 0; /* Oculta o texto inicialmente */
-  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
-  margin-left: 5px; /* Adiciona um espaçamento entre o ícone e o texto */
+  transition: opacity 0.3s ease;
   white-space: nowrap; /* Evita que o texto quebre em várias linhas */
 }
 
-.view-btn-sucesso:hover {
-  transform: scale(1.2); /* Aumenta a escala do botão ao passar o mouse */
-  padding: 5px 10px; /* Aumenta o espaçamento interno para acomodar o texto */
-  border-radius: 5px; /* Torna o botão retangular */
+.btn:hover {
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeiramente a escala do botão ao passar o mouse */
+  border-radius: 5px;
 }
 
-.view-btn-sucesso:hover .btn-text {
+.btn:hover .btn-text {
   opacity: 1; /* Exibe o texto ao passar o mouse sobre o botão */
 }
+.btn-sucesso {
+  background-color: #00944a;
+}
+
+.btn-perigo {
+  background-color: #ff0000;
+}
+
+.btn-aviso {
+  background-color: #ffa500;
+}
+/* Fim configuração dos botoes dos cards*/
 
 .view-btn:hover {
   background-color: #004d73; /* Tom mais escuro para hover */

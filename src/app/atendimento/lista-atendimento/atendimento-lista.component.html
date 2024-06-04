@@ -37,7 +37,7 @@
       </p>
 
       <button
-        class="view-btn-sucesso"
+        class="btn btn-sucesso"
         (click)="editarAtendimento(atendimento)"
         (mouseenter)="isHovering = true"
         (mouseleave)="isHovering = false"
@@ -46,6 +46,16 @@
         <span class="btn-text" [ngClass]="{ show: isHovering }"
           >Solucionar</span
         >
+      </button>
+
+      <button
+        class="btn btn-aviso"
+        (click)="editarAtendimento(atendimento)"
+        (mouseenter)="isHovering = true"
+        (mouseleave)="isHovering = false"
+      >
+        <i class="fa-solid fa-pen"></i>
+        <span class="btn-text" [ngClass]="{ show: isHovering }"> Editar </span>
       </button>
     </li>
   </ul>
