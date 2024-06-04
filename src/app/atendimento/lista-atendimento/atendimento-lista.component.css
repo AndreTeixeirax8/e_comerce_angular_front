@@ -61,13 +61,13 @@ h2 {
   background-color: #00944a;
   color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 7px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   transition: background-color 0.3s;
-  width: 10%;
+  width: 100px;
   margin-top: 10px;
 }
 
