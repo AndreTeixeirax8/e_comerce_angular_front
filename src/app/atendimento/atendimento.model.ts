@@ -14,11 +14,11 @@ export interface ClienteEntity {
 }
 
 export interface TipoServicoEntity {
-  id?: string;
+  id?: any;
   nome_servico: string;
 }
 
 export interface OrigemAtendimentoEntity {
-  id?: string;
+  id?: any;
   nome_antendimento: string;
 }

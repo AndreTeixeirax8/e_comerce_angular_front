@@ -15,11 +15,19 @@
       </div>
       <div class="form-row">
         <label>Tipo de Serviço:</label>
-        <input class="atendimento-input" [(ngModel)]="tipoServico" />
+        <select class="atendimento-input" [(ngModel)]="tipoServico">
+          <option *ngFor="let tipo of tiposServico" [value]="tipo.id">
+            {{ tipo.nome_servico }}
+          </option>
+        </select>
       </div>
       <div class="form-row">
         <label>Origem do Atendimento:</label>
-        <input class="atendimento-input" [(ngModel)]="origemAtendimento" />
+        <select class="atendimento-input" [(ngModel)]="origemAtendimento">
+          <option *ngFor="let origem of origensAtendimento" [value]="origem.id">
+            {{ origem.nome_antendimento }}
+          </option>
+        </select>
       </div>
       <div class="btn-container">
         <button class="submit-btn" (click)="onSalvar()">Salvar</button>
