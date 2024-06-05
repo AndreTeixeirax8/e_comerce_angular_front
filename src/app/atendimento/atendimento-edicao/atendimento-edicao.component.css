@@ -90,6 +90,22 @@ textarea.atendimento-input:focus {
   background: #004d73;
 }
 
+input[type='text'],
+select.atendimento-input,
+textarea.atendimento-input {
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  display: block;
+  width: 200px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 @media (max-width: 600px) {
   .modal-content {
     padding: 10px;
