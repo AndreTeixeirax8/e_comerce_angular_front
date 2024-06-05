@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AtendimentoService } from '../atendimento.service';
+import { AtendimentoModel } from '../atendimento.model';
 
 @Component({
   selector: 'app-atendimento-lista',
@@ -7,6 +8,7 @@ import { AtendimentoService } from '../atendimento.service';
   styleUrls: ['./atendimento-lista.component.css'],
 })
 export class AtendimentoListaComponent implements OnInit {
+  atendimentoSelecionado: AtendimentoModel | null = null;
   isHovering = false;
   paginaAtual = 1;
   itensPorPagina = 5;
@@ -90,6 +92,30 @@ export class AtendimentoListaComponent implements OnInit {
         (response) => {
           console.log('Atendimento editado com sucesso:', response);
           // Você pode atualizar a lista de atendimentos aqui, se necessário
+        },
+        (error) => {
+          console.error('Erro ao editar o atendimento:', error);
+        },
+      );
+  }
+
+  editarAtendimentoCompleto(atendimento: AtendimentoModel) {
+    this.atendimentoSelecionado = { ...atendimento };
+  }
+
+  cancelarEdicao() {
+    this.atendimentoSelecionado = null;
+  }
+
+  salvarAtendimento(atendimento: AtendimentoModel) {
+    this.atendimentoService
+      .editaAtendimento(atendimento.id, atendimento)
+      .subscribe(
+        (response) => {
+          console.log('Atendimento editado com sucesso:', response);
+          // Atualize a lista de atendimentos, se necessário
+          this.atendimentoSelecionado = null;
+          this.buscarAtendimentos(); // Atualize a lista de atendimentos após a edição
         },
         (error) => {
           console.error('Erro ao editar o atendimento:', error);
