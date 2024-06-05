@@ -1,25 +1,30 @@
 <div class="modal-overlay" *ngIf="atendimento">
   <div class="modal-content">
-    <h2>Editar Atendimento</h2>
-    <div>
-      <label>Nome do Cliente:</label>
-      <input [(ngModel)]="nomeCliente" />
-    </div>
-    <div>
-      <label>Observações:</label>
-      <textarea [(ngModel)]="observacoes"></textarea>
-    </div>
-    <div>
-      <label>Tipo de Serviço:</label>
-      <input [(ngModel)]="tipoServico" />
-    </div>
-    <div>
-      <label>Origem do Atendimento:</label>
-      <input [(ngModel)]="origemAtendimento" />
-    </div>
-    <div>
-      <button (click)="onSalvar()">Salvar</button>
-      <button (click)="onCancelar()">Cancelar</button>
+    <div class="form-container">
+      <h2>Editar Atendimento</h2>
+      <div class="form-row">
+        <label>Nome do Cliente:</label>
+        <input class="atendimento-input" [(ngModel)]="nomeCliente" />
+      </div>
+      <div class="form-row">
+        <label>Observações:</label>
+        <textarea
+          class="atendimento-input observacoes"
+          [(ngModel)]="observacoes"
+        ></textarea>
+      </div>
+      <div class="form-row">
+        <label>Tipo de Serviço:</label>
+        <input class="atendimento-input" [(ngModel)]="tipoServico" />
+      </div>
+      <div class="form-row">
+        <label>Origem do Atendimento:</label>
+        <input class="atendimento-input" [(ngModel)]="origemAtendimento" />
+      </div>
+      <div class="btn-container">
+        <button class="submit-btn" (click)="onSalvar()">Salvar</button>
+        <button class="submit-btn" (click)="onCancelar()">Cancelar</button>
+      </div>
     </div>
   </div>
 </div>
