@@ -1,31 +1,5 @@
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem;
-}
-.collection-header {
-  font-weight: 600;
-  font-size: 2rem;
-  margin-right: 2rem;
-}
-
-.header {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .container {
   position: relative;
-}
-
-.down {
-  position: absolute;
-  right: 50px;
-  top: 170px;
 }
 
 .btn-container {
@@ -34,17 +8,6 @@
   margin-top: 3rem;
   margin-left: 1rem;
 }
-
-.btn {
-  font-weight: 400;
-  color: rgb(206, 71, 71);
-}
-
-.btn:hover {
-  color: black;
-  cursor: pointer;
-}
-
 
 .product-list {
   display: flex;
@@ -84,7 +47,8 @@
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -106,7 +70,8 @@
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-secondary:hover {
@@ -115,7 +80,7 @@
   border-color: #4e555b;
 }
 
- a {
+a {
   text-decoration: none;
 }
 
@@ -135,8 +100,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "left right"
-      "left right";
+      'left right'
+      'left right';
   }
   h2 br {
     display: none;
