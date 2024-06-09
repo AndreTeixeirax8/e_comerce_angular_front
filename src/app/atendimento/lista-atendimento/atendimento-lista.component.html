@@ -100,4 +100,7 @@
     (salvar)="salvarAtendimento($event)"
     (cancelar)="cancelarEdicao()"
   ></app-atendimento-edicao>
+  <div *ngIf="exibirMensagemSucesso" class="mensagem-sucesso">
+    {{ mensagemSucesso }}
+  </div>
 </div>

@@ -8,6 +8,9 @@ import { AtendimentoModel } from '../atendimento.model';
   styleUrls: ['./atendimento-lista.component.css'],
 })
 export class AtendimentoListaComponent implements OnInit {
+  mensagemSucesso: string = '';
+  exibirMensagemSucesso: boolean = false;
+
   atendimentoSelecionado: AtendimentoModel | null = null;
   isHovering = false;
   paginaAtual = 1;
@@ -79,7 +82,7 @@ export class AtendimentoListaComponent implements OnInit {
     this.paginaAtual = this.atendimentos.meta.totalPages;
     this.buscarAtendimentos();
   }
-
+  /*
   editarAtendimento(atendimento: any) {
     const atendimentoEditado = {
       ...atendimento,
@@ -92,6 +95,55 @@ export class AtendimentoListaComponent implements OnInit {
         (response) => {
           console.log('Atendimento editado com sucesso:', response);
           // Você pode atualizar a lista de atendimentos aqui, se necessário
+        },
+        (error) => {
+          console.error('Erro ao editar o atendimento:', error);
+        },
+      );
+  }*/
+  /*
+  editarAtendimento(atendimento: any) {
+    const atendimentoEditado = {
+      ...atendimento,
+      status: 'solucionado',
+    };
+
+    this.atendimentoService
+      .editaAtendimento(atendimento.id, atendimentoEditado)
+      .subscribe(
+        (response) => {
+          console.log('Atendimento editado com sucesso:', response);
+          this.mensagemSucesso = 'Atendimento solucionado com sucesso!';
+          this.exibirMensagemSucesso = true;
+          setTimeout(() => {
+            this.exibirMensagemSucesso = false;
+          }, 3000); // Oculta a mensagem após 3 segundos
+        },
+        (error) => {
+          console.error('Erro ao editar o atendimento:', error);
+        },
+      );
+  }*/
+
+  editarAtendimento(atendimento: any) {
+    const atendimentoEditado = {
+      ...atendimento,
+      status: 'solucionado',
+    };
+
+    this.atendimentoService
+      .editaAtendimento(atendimento.id, atendimentoEditado)
+      .subscribe(
+        (response) => {
+          console.log('Atendimento editado com sucesso:', response);
+          this.mensagemSucesso = 'Atendimento solucionado com sucesso!';
+          this.exibirMensagemSucesso = true;
+          setTimeout(() => {
+            this.exibirMensagemSucesso = false;
+            setTimeout(() => {
+              this.recarregarPagina();
+            }, 250); // Aguarda 500ms antes de recarregar a página
+          }, 2000); // Oculta a mensagem após 3 segundos
         },
         (error) => {
           console.error('Erro ao editar o atendimento:', error);
@@ -121,5 +173,9 @@ export class AtendimentoListaComponent implements OnInit {
           console.error('Erro ao editar o atendimento:', error);
         },
       );
+  }
+
+  recarregarPagina() {
+    window.location.reload();
   }
 }
