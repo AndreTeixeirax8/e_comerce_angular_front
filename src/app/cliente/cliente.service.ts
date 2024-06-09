@@ -10,16 +10,20 @@ export class ClienteService {
 
   constructor(private http: HttpClient) {}
 
-  buscaVariosCliente():Observable<any[]> {
+  buscaVariosCliente(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl + '/cliente');
   }
 
+  /*
   criaCliente(cliente:any){
     return this.http.post(this.apiUrl + '/cliente/',cliente).subscribe()
+  }*/
+
+  criaCliente(cliente: any): Observable<any> {
+    return this.http.post(this.apiUrl + '/cliente/', cliente);
   }
 
-  editProduct(id:any,cliente:any){
-    return this.http.patch(this.apiUrl + '/cliente/' + id,cliente)
+  editProduct(id: any, cliente: any) {
+    return this.http.patch(this.apiUrl + '/cliente/' + id, cliente);
   }
-
 }

@@ -55,6 +55,35 @@ input[type='text']:focus {
   background: #004d73; /* Tom mais escuro para hover */
 }
 
+/* mensgem -sucesso*/
+.mensagem-sucesso {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 10px;
+  z-index: 9999;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*fim */
+
 @media (max-width: 600px) {
   .form-container {
     padding: 10px;
