@@ -8,7 +8,17 @@
     <i class="fa-solid fa-magnifying-glass"></i> Busca
   </button>
   <ul>
-    <li *ngFor="let atendimento of atendimentos.data" class="list-item">
+    <li
+      *ngFor="let atendimento of atendimentos.data"
+      class="list-item"
+      [ngClass]="{
+        'bg-verde': calcularDiasDesdeDataCriacao(atendimento.dataCriacao) <= 3,
+        'bg-amarelo':
+          calcularDiasDesdeDataCriacao(atendimento.dataCriacao) > 3 &&
+          calcularDiasDesdeDataCriacao(atendimento.dataCriacao) <= 6,
+        'bg-vermelho': calcularDiasDesdeDataCriacao(atendimento.dataCriacao) > 6
+      }"
+    >
       <p class="list-item-title">
         Nome do Cliente: {{ atendimento.cliente_entity.nome }}
       </p>
@@ -28,8 +38,8 @@
         }}
       </p>
       <p class="list-item-description">
-        <strong>Data: </strong
-        >{{ atendimento.dataCriacao | date : 'dd/MM/yyyy' }}
+        <strong>Data:</strong>
+        {{ atendimento.dataCriacao | date : 'dd/MM/yyyy' }}
       </p>
 
       <p class="list-item-description">

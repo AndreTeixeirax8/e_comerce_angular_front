@@ -178,4 +178,16 @@ export class AtendimentoListaComponent implements OnInit {
   recarregarPagina() {
     window.location.reload();
   }
+
+  calcularDiasDesdeDataCriacao(dataCriacaoString: string): number {
+    const dataCriacao = new Date(dataCriacaoString);
+    const dataAtual = new Date();
+    const diferencaEmMilissegundos = Math.abs(
+      dataAtual.getTime() - dataCriacao.getTime(),
+    );
+    const diferencaEmDias = Math.ceil(
+      diferencaEmMilissegundos / (1000 * 60 * 60 * 24),
+    );
+    return diferencaEmDias;
+  }
 }

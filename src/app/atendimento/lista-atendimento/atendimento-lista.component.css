@@ -135,6 +135,19 @@ h2 {
   }
 }
 /*fim */
+/*inicio das cores dos paragrafos*/
+.bg-verde {
+  background-color: #79d87c; /* Cor verde clara */
+}
+
+.bg-amarelo {
+  background-color: #e6da72; /* Cor amarela fraca */
+}
+
+.bg-vermelho {
+  background-color: #ec808b; /* Cor vermelha fraca */
+}
+/*fim*/
 
 @media (max-width: 768px) {
   .list-container {
