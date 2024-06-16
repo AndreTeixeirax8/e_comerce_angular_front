@@ -38,8 +38,8 @@ a {
 
 .desktop-view {
   display: block;
-  width: 100%;
-  padding-left: 20%;
+  width: 80%;
+  padding-left: 10px;
 }
 
 .table-container {
@@ -157,5 +157,11 @@ h4 {
   /* Ajustando o botão para ficar alinhado com a tabela em telas pequenas */
   .btn-container {
     margin-right: 1%;
+  }
+
+  .desktop-view {
+    display: block;
+    width: 100%;
+    padding-left: 20%;
   }
 }
