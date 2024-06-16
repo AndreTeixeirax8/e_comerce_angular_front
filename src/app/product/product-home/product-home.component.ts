@@ -17,11 +17,12 @@ export class ProductHomeComponent implements OnInit {
     this.loadAtendimentoData();
   }
 
+  /*
   loadProducts() {
     return this.productService
       .getProducts()
       .subscribe((data: any) => (this.products = data));
-  }
+  }*/
 
   loadAtendimentoData() {
     this.productService.getAtendimentoTotal().subscribe(
