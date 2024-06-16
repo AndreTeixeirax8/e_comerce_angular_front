@@ -9,14 +9,12 @@ import { Router } from '@angular/router';
 })
 export class ProductHomeComponent implements OnInit {
   products: any;
-  
-  constructor(
-    public productService: ProductService,
-    private router: Router
-  ) {}
+  atendimentoData: any;
+
+  constructor(public productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
-    this.loadProducts();
+    this.loadAtendimentoData();
   }
 
   loadProducts() {
@@ -25,11 +23,21 @@ export class ProductHomeComponent implements OnInit {
       .subscribe((data: any) => (this.products = data));
   }
 
+  loadAtendimentoData() {
+    this.productService.getAtendimentoTotal().subscribe(
+      (data: any) => {
+        this.atendimentoData = data;
+      },
+      (error) => {
+        console.error('Erro ao carregar dados de atendimento:', error);
+      },
+    );
+  }
+
   logout() {
     // Limpa o token armazenado
     window.localStorage.removeItem('token');
     // Redireciona para a tela de login
     this.router.navigate(['/auth/login']);
   }
- 
 }

@@ -9,29 +9,6 @@
   margin-left: 1rem;
 }
 
-.product-list {
-  display: flex;
-  flex-direction: column;
-  height: 180px;
-  width: 180px;
-  background-color: rgb(87, 84, 84);
-  justify-content: center;
-  margin: 0.5rem;
-  cursor: pointer;
-}
-
-.product-list-text {
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-.product-list-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
 /*/ BOTAO*/
 /* Estilos para o botão primário */
 .btn-primary {
@@ -57,31 +34,61 @@
   border-color: #0056b3;
 }
 
-/* Estilos para o botão secundário */
-.btn-secondary {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.btn-secondary:hover {
-  color: #fff;
-  background-color: #545b62;
-  border-color: #4e555b;
-}
-
 a {
   text-decoration: none;
+}
+
+/*tabela*/
+/* Novos estilos para as tabelas */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #1a237e;
+  color: #ffffff;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: rgba(26, 35, 126, 0.05);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(26, 35, 126, 0.1);
+}
+
+h4 {
+  color: #1a237e;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -105,5 +112,13 @@ a {
   }
   h2 br {
     display: none;
+  }
+
+  .desktop-view {
+    display: block; /* Alterado de grid para block */
+  }
+
+  .table-container {
+    max-width: 80%;
   }
 }

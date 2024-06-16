@@ -82,48 +82,6 @@ export class AtendimentoListaComponent implements OnInit {
     this.paginaAtual = this.atendimentos.meta.totalPages;
     this.buscarAtendimentos();
   }
-  /*
-  editarAtendimento(atendimento: any) {
-    const atendimentoEditado = {
-      ...atendimento,
-      status: 'solucionado',
-    };
-
-    this.atendimentoService
-      .editaAtendimento(atendimento.id, atendimentoEditado)
-      .subscribe(
-        (response) => {
-          console.log('Atendimento editado com sucesso:', response);
-          // Você pode atualizar a lista de atendimentos aqui, se necessário
-        },
-        (error) => {
-          console.error('Erro ao editar o atendimento:', error);
-        },
-      );
-  }*/
-  /*
-  editarAtendimento(atendimento: any) {
-    const atendimentoEditado = {
-      ...atendimento,
-      status: 'solucionado',
-    };
-
-    this.atendimentoService
-      .editaAtendimento(atendimento.id, atendimentoEditado)
-      .subscribe(
-        (response) => {
-          console.log('Atendimento editado com sucesso:', response);
-          this.mensagemSucesso = 'Atendimento solucionado com sucesso!';
-          this.exibirMensagemSucesso = true;
-          setTimeout(() => {
-            this.exibirMensagemSucesso = false;
-          }, 3000); // Oculta a mensagem após 3 segundos
-        },
-        (error) => {
-          console.error('Erro ao editar o atendimento:', error);
-        },
-      );
-  }*/
 
   editarAtendimento(atendimento: any) {
     const atendimentoEditado = {

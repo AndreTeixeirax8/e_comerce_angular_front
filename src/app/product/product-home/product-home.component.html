@@ -1,11 +1,72 @@
 <app-navbar2></app-navbar2>
-
 <div class="container">
   <div class="header"></div>
 </div>
-
 <div class="desktop-view">
   <div class="btn-container">
     <a href="/atendimento" class="btn btn-primary">Atendimento</a>
+  </div>
+
+  <div class="table-container" *ngIf="atendimentoData">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Descrição">Total Abertos</td>
+          <td data-label="Valor">{{ atendimentoData.totalAbertos }}</td>
+        </tr>
+        <tr>
+          <td data-label="Descrição">Total Solucionados</td>
+          <td data-label="Valor">{{ atendimentoData.totalSolucionados }}</td>
+        </tr>
+        <tr>
+          <td data-label="Descrição">Mais Antigo</td>
+          <td data-label="Valor">
+            {{ atendimentoData.maisAntigo | date : 'dd/MM/yyyy HH:mm:ss' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Total por Tipo de Serviço</h4>
+    <table class="table" *ngIf="atendimentoData?.totalPorTipoServico">
+      <thead>
+        <tr>
+          <th>Tipo de Serviço</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tipo of atendimentoData.totalPorTipoServico | keyvalue">
+          <td data-label="Tipo de Serviço">{{ tipo.key }}</td>
+          <td data-label="Total">{{ tipo.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Total por Origem de Atendimento</h4>
+    <table class="table" *ngIf="atendimentoData?.totalPorOrigemAtendimento">
+      <thead>
+        <tr>
+          <th>Origem</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let origem of atendimentoData.totalPorOrigemAtendimento | keyvalue
+          "
+        >
+          <td data-label="Origem">{{ origem.key }}</td>
+          <td data-label="Total">{{ origem.value }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
