@@ -7,6 +7,41 @@
     <a href="/atendimento" class="btn btn-primary">Atendimento</a>
   </div>
 
+  <div class="chart-container" *ngIf="atendimentoData">
+    <div class="chart">
+      <h4>Status dos Atendimentos</h4>
+      <canvas
+        baseChart
+        [data]="statusChartData"
+        [type]="pieChartType"
+        [options]="pieChartOptions"
+      >
+      </canvas>
+    </div>
+
+    <div class="chart">
+      <h4>Total por Tipo de Serviço</h4>
+      <canvas
+        baseChart
+        [data]="tipoServicoChartData"
+        [type]="pieChartType"
+        [options]="pieChartOptions"
+      >
+      </canvas>
+    </div>
+
+    <div class="chart">
+      <h4>Total por Origem de Atendimento</h4>
+      <canvas
+        baseChart
+        [data]="origemAtendimentoChartData"
+        [type]="pieChartType"
+        [options]="pieChartOptions"
+      >
+      </canvas>
+    </div>
+  </div>
+
   <div class="table-container" *ngIf="atendimentoData">
     <table class="table">
       <thead>

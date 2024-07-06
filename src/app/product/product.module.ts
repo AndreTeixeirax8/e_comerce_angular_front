@@ -11,6 +11,7 @@ import { ProductCreateComponent } from './product-create/product-create.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { SharedModule } from '../common/shared.module';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SharedModule } from '../common/shared.module';
     IvyCarouselModule,
     ReactiveFormsModule,
     SharedModule,
+    NgChartsModule,
   ],
   exports: [NavbarComponent],
 })
