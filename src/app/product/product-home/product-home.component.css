@@ -98,6 +98,7 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem;
+  margin-left: 80px;
 }
 
 .chart {
