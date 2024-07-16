@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AtendimentoService {
-  apiUrl = 'http://localhost:3000';
+  // apiUrl = 'http://localhost:3000';
+  apiUrl = 'ecomercenestjsback-production.up.railway.app';
 
   constructor(private http: HttpClient) {}
 
