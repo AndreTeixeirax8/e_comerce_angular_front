@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 })
 export class AuthService {
   //apiUrl ='http://localhost:3000'
-  apiUrl = 'ecomercenestjsback-production.up.railway.app';
+  apiUrl = 'https://ecomercenestjsback-production.up.railway.app';
 
   constructor(private http: HttpClient) {}
 

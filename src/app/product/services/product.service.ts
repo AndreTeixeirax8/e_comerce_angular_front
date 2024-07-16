@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
   //apiUrl = 'http://localhost:3000';
-  apiUrl = 'ecomercenestjsback-production.up.railway.app';
+  apiUrl = 'https://ecomercenestjsback-production.up.railway.app';
 
   constructor(private http: HttpClient) {}
 
